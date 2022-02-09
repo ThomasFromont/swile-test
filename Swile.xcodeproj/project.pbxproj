@@ -20,6 +20,17 @@
 		20808DF027B468A0005BD5F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20808DF227B468A0005BD5F6 /* Localizable.strings */; };
 		20808DF727B46AB4005BD5F6 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DF627B46AB4005BD5F6 /* Assets.swift */; };
 		20808DF927B46ABE005BD5F6 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DF827B46ABE005BD5F6 /* Strings.swift */; };
+		20808DFF27B473EC005BD5F6 /* TransfersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DFE27B473EC005BD5F6 /* TransfersViewModel.swift */; };
+		20808E0127B473F5005BD5F6 /* TransfersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0027B473F5005BD5F6 /* TransfersViewController.swift */; };
+		20808E0627B47659005BD5F6 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0527B47659005BD5F6 /* HeaderCell.swift */; };
+		20808E0827B47661005BD5F6 /* HeaderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0727B47661005BD5F6 /* HeaderCellViewModel.swift */; };
+		20808E0A27B476E1005BD5F6 /* ObservableType+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0927B476E1005BD5F6 /* ObservableType+Loading.swift */; };
+		20808E0E27B478F5005BD5F6 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0D27B478F5005BD5F6 /* StyleGuide.swift */; };
+		20808E1027B47945005BD5F6 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0F27B47945005BD5F6 /* ColorScheme.swift */; };
+		20808E1227B47A31005BD5F6 /* FontBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E1127B47A30005BD5F6 /* FontBook.swift */; };
+		20808E1627B47D3E005BD5F6 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E1527B47D3E005BD5F6 /* Header.swift */; };
+		20808E1927B47D9A005BD5F6 /* HasData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E1827B47D9A005BD5F6 /* HasData.swift */; };
+		20808E1C27B47FFC005BD5F6 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E1B27B47FFC005BD5F6 /* Reusable.swift */; };
 		51EF4238C1D804B5871C261A /* Pods_SwileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60399C3C79711BE4395BFFC /* Pods_SwileTests.framework */; };
 		7329121CF302AA315AC8A700 /* Pods_Swile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F658AEC58B41DC3903170E /* Pods_Swile.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +73,17 @@
 		20808DF427B468A4005BD5F6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		20808DF627B46AB4005BD5F6 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		20808DF827B46ABE005BD5F6 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		20808DFE27B473EC005BD5F6 /* TransfersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewModel.swift; sourceTree = "<group>"; };
+		20808E0027B473F5005BD5F6 /* TransfersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewController.swift; sourceTree = "<group>"; };
+		20808E0527B47659005BD5F6 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		20808E0727B47661005BD5F6 /* HeaderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellViewModel.swift; sourceTree = "<group>"; };
+		20808E0927B476E1005BD5F6 /* ObservableType+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Loading.swift"; sourceTree = "<group>"; };
+		20808E0D27B478F5005BD5F6 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
+		20808E0F27B47945005BD5F6 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		20808E1127B47A30005BD5F6 /* FontBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontBook.swift; sourceTree = "<group>"; };
+		20808E1527B47D3E005BD5F6 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		20808E1827B47D9A005BD5F6 /* HasData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasData.swift; sourceTree = "<group>"; };
+		20808E1B27B47FFC005BD5F6 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		55F658AEC58B41DC3903170E /* Pods_Swile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC962226DCC970D15F924184 /* Pods-SwileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwileTests.release.xcconfig"; path = "Target Support Files/Pods-SwileTests/Pods-SwileTests.release.xcconfig"; sourceTree = "<group>"; };
 		BDFFE8BC22E731E45EEF65D8 /* Pods-Swile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swile.debug.xcconfig"; path = "Target Support Files/Pods-Swile/Pods-Swile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +156,10 @@
 			children = (
 				20808DDB27B46104005BD5F6 /* App */,
 				20808DDE27B461EE005BD5F6 /* Contracts */,
+				20808E1A27B47FEF005BD5F6 /* Commons */,
+				20808E0227B47637005BD5F6 /* UICommons */,
+				20808E0B27B478B0005BD5F6 /* Design */,
+				20808DFA27B473A0005BD5F6 /* Features */,
 				20808DE127B462EC005BD5F6 /* Providers */,
 				20808DE627B463CA005BD5F6 /* Models */,
 				20808DE227B4630A005BD5F6 /* SupportingFiles */,
@@ -172,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				20808DDF27B461FD005BD5F6 /* Coordinator.swift */,
+				20808E0927B476E1005BD5F6 /* ObservableType+Loading.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -218,6 +245,100 @@
 				20808DF827B46ABE005BD5F6 /* Strings.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		20808DFA27B473A0005BD5F6 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				20808DFD27B473DA005BD5F6 /* Transfers */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		20808DFD27B473DA005BD5F6 /* Transfers */ = {
+			isa = PBXGroup;
+			children = (
+				20808DFE27B473EC005BD5F6 /* TransfersViewModel.swift */,
+				20808E0027B473F5005BD5F6 /* TransfersViewController.swift */,
+			);
+			path = Transfers;
+			sourceTree = "<group>";
+		};
+		20808E0227B47637005BD5F6 /* UICommons */ = {
+			isa = PBXGroup;
+			children = (
+				20808E0327B47649005BD5F6 /* Cells */,
+			);
+			path = UICommons;
+			sourceTree = "<group>";
+		};
+		20808E0327B47649005BD5F6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				20808E0427B4764F005BD5F6 /* Header */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		20808E0427B4764F005BD5F6 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				20808E0527B47659005BD5F6 /* HeaderCell.swift */,
+				20808E0727B47661005BD5F6 /* HeaderCellViewModel.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		20808E0B27B478B0005BD5F6 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				20808E1427B47D32005BD5F6 /* Views */,
+				20808E1727B47D8D005BD5F6 /* Protocols */,
+				20808E0C27B478CE005BD5F6 /* StyleGuide */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		20808E0C27B478CE005BD5F6 /* StyleGuide */ = {
+			isa = PBXGroup;
+			children = (
+				20808E0D27B478F5005BD5F6 /* StyleGuide.swift */,
+				20808E0F27B47945005BD5F6 /* ColorScheme.swift */,
+				20808E1127B47A30005BD5F6 /* FontBook.swift */,
+				20808E1327B47BEE005BD5F6 /* Fonts */,
+			);
+			path = StyleGuide;
+			sourceTree = "<group>";
+		};
+		20808E1327B47BEE005BD5F6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		20808E1427B47D32005BD5F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20808E1527B47D3E005BD5F6 /* Header.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		20808E1727B47D8D005BD5F6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				20808E1827B47D9A005BD5F6 /* HasData.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		20808E1A27B47FEF005BD5F6 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				20808E1B27B47FFC005BD5F6 /* Reusable.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		37736BAAB39D38EEBDD9B341 /* Frameworks */ = {
@@ -465,13 +586,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20808E1927B47D9A005BD5F6 /* HasData.swift in Sources */,
+				20808E1627B47D3E005BD5F6 /* Header.swift in Sources */,
+				20808E0127B473F5005BD5F6 /* TransfersViewController.swift in Sources */,
 				20808DE027B461FD005BD5F6 /* Coordinator.swift in Sources */,
 				20808DE827B463E5005BD5F6 /* Transfer.swift in Sources */,
 				20808DF727B46AB4005BD5F6 /* Assets.swift in Sources */,
 				20808DE527B46343005BD5F6 /* TransfersProvider.swift in Sources */,
 				20808DDD27B46148005BD5F6 /* AppCoordinator.swift in Sources */,
+				20808E0627B47659005BD5F6 /* HeaderCell.swift in Sources */,
+				20808E0A27B476E1005BD5F6 /* ObservableType+Loading.swift in Sources */,
 				20808DAC27B45F30005BD5F6 /* AppDelegate.swift in Sources */,
 				20808DF927B46ABE005BD5F6 /* Strings.swift in Sources */,
+				20808E1C27B47FFC005BD5F6 /* Reusable.swift in Sources */,
+				20808E1027B47945005BD5F6 /* ColorScheme.swift in Sources */,
+				20808E0827B47661005BD5F6 /* HeaderCellViewModel.swift in Sources */,
+				20808DFF27B473EC005BD5F6 /* TransfersViewModel.swift in Sources */,
+				20808E0E27B478F5005BD5F6 /* StyleGuide.swift in Sources */,
+				20808E1227B47A31005BD5F6 /* FontBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

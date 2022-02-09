@@ -11,16 +11,19 @@ final class AppCoordinator: Coordinator {
 
     private let window: UIWindow?
     private let transfersProvider: TransfersProvider
+    private let styleGuide: StyleGuide
     private let navigationController = UINavigationController()
 
     // MARK: - Initializers
 
-    init(window: UIWindow?, transfersProvider: TransfersProvider) {
+    init(window: UIWindow?, transfersProvider: TransfersProvider, styleGuide: StyleGuide) {
         self.window = window
         self.transfersProvider = transfersProvider
+        self.styleGuide = styleGuide
     }
 
     func start() {
+        navigationController.setNavigationBarHidden(true, animated: false)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         showTransfers()
@@ -32,11 +35,10 @@ final class AppCoordinator: Coordinator {
     }
 
     private func showTransfers() {
-        // TODO: - show Transfers screen
-        /*let viewModel = TransfersViewModel(transfersProvider: transfersProvider)
+        let viewModel = TransfersViewModel(transfersProvider: transfersProvider)
         viewModel.delegate = self
-        let viewController = TransfersViewController(viewModel: viewModel)
-        navigationController.viewControllers = [viewController]*/
+        let viewController = TransfersViewController(viewModel: viewModel, styleGuide: styleGuide)
+        navigationController.viewControllers = [viewController]
     }
 
     private func showTransfer(_ transfer: Transfer) {
@@ -48,9 +50,8 @@ final class AppCoordinator: Coordinator {
     }
 }
 
-// TODO: - implement Transfers Delegate
-/*extension AppCoordinator: TransfersViewModelDelegate {
+extension AppCoordinator: TransfersViewModelDelegate {
     func didSelect(transfer: Transfer, from viewModel: TransfersViewModel) {
         showTransfer(transfer)
     }
-}*/
+}
