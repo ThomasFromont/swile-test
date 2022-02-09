@@ -1,0 +1,45 @@
+disabled_rules: # rule identifiers to exclude from running
+  - nesting # Not configurable enough, and the default is way too restrictive
+  - identifier_name # Triggers on all rx_* variables
+  - type_body_length
+  - type_name
+  - todo
+  - redundant_void_return
+  - large_tuple
+  - notification_center_detachment
+  - compiler_protocol_init
+  - private_over_fileprivate
+  - fallthrough
+
+opt_in_rules: # some rules are only opt-in. Find all the available rules by running: swiftlint rules
+  - attributes
+  - closure_spacing
+  - conditional_returns_on_newline
+  - explicit_init
+  - force_unwrapping
+  - nimble_operator
+  - operator_usage_whitespace
+  - overridden_super_call
+  - private_outlet
+  - redundant_nil_coalescing
+
+included: # paths to include during linting. `--path` is ignored if present.
+  - Swile
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+
+# rules that have both warning and error levels, can set just the warning level
+# implicitly
+line_length:
+  warning: 200
+  error: 300
+file_length:
+  warning: 500
+force_unwrapping: error
+trailing_comma:
+  mandatory_comma: true
+
+warning_threshold: 1

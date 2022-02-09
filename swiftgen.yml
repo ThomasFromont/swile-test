@@ -1,0 +1,11 @@
+strings:
+  inputs: Swile/Resources/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: Swile/Resources/Generated/Strings.swift
+xcassets:
+  inputs:
+    - Swile/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: Swile/Resources/Generated/Assets.swift

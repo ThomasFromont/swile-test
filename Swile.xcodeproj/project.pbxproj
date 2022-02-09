@@ -1,0 +1,850 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20808DAC27B45F30005BD5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DAB27B45F30005BD5F6 /* AppDelegate.swift */; };
+		20808DB527B45F35005BD5F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20808DB427B45F35005BD5F6 /* Assets.xcassets */; };
+		20808DB827B45F35005BD5F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20808DB627B45F35005BD5F6 /* LaunchScreen.storyboard */; };
+		20808DC327B45F36005BD5F6 /* SwileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DC227B45F36005BD5F6 /* SwileTests.swift */; };
+		20808DCD27B45F36005BD5F6 /* SwileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DCC27B45F36005BD5F6 /* SwileUITests.swift */; };
+		20808DCF27B45F36005BD5F6 /* SwileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DCE27B45F36005BD5F6 /* SwileUITestsLaunchTests.swift */; };
+		20808DDD27B46148005BD5F6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DDC27B46148005BD5F6 /* AppCoordinator.swift */; };
+		20808DE027B461FD005BD5F6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DDF27B461FD005BD5F6 /* Coordinator.swift */; };
+		20808DE527B46343005BD5F6 /* TransfersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DE427B46343005BD5F6 /* TransfersProvider.swift */; };
+		20808DE827B463E5005BD5F6 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DE727B463E5005BD5F6 /* Transfer.swift */; };
+		20808DF027B468A0005BD5F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20808DF227B468A0005BD5F6 /* Localizable.strings */; };
+		20808DF727B46AB4005BD5F6 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DF627B46AB4005BD5F6 /* Assets.swift */; };
+		20808DF927B46ABE005BD5F6 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DF827B46ABE005BD5F6 /* Strings.swift */; };
+		51EF4238C1D804B5871C261A /* Pods_SwileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60399C3C79711BE4395BFFC /* Pods_SwileTests.framework */; };
+		7329121CF302AA315AC8A700 /* Pods_Swile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F658AEC58B41DC3903170E /* Pods_Swile.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20808DBF27B45F36005BD5F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20808DA027B45F30005BD5F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20808DA727B45F30005BD5F6;
+			remoteInfo = Swile;
+		};
+		20808DC927B45F36005BD5F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20808DA027B45F30005BD5F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20808DA727B45F30005BD5F6;
+			remoteInfo = Swile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F8F34A5D32F1DA4F7CECA26 /* Pods-Swile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swile.release.xcconfig"; path = "Target Support Files/Pods-Swile/Pods-Swile.release.xcconfig"; sourceTree = "<group>"; };
+		20808DA827B45F30005BD5F6 /* Swile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20808DAB27B45F30005BD5F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20808DB427B45F35005BD5F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20808DB727B45F35005BD5F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20808DB927B45F35005BD5F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20808DBE27B45F36005BD5F6 /* SwileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20808DC227B45F36005BD5F6 /* SwileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwileTests.swift; sourceTree = "<group>"; };
+		20808DC827B45F36005BD5F6 /* SwileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20808DCC27B45F36005BD5F6 /* SwileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwileUITests.swift; sourceTree = "<group>"; };
+		20808DCE27B45F36005BD5F6 /* SwileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		20808DDC27B46148005BD5F6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		20808DDF27B461FD005BD5F6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		20808DE427B46343005BD5F6 /* TransfersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersProvider.swift; sourceTree = "<group>"; };
+		20808DE727B463E5005BD5F6 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		20808DF127B468A0005BD5F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		20808DF327B468A3005BD5F6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		20808DF427B468A4005BD5F6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		20808DF627B46AB4005BD5F6 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		20808DF827B46ABE005BD5F6 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		55F658AEC58B41DC3903170E /* Pods_Swile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC962226DCC970D15F924184 /* Pods-SwileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwileTests.release.xcconfig"; path = "Target Support Files/Pods-SwileTests/Pods-SwileTests.release.xcconfig"; sourceTree = "<group>"; };
+		BDFFE8BC22E731E45EEF65D8 /* Pods-Swile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swile.debug.xcconfig"; path = "Target Support Files/Pods-Swile/Pods-Swile.debug.xcconfig"; sourceTree = "<group>"; };
+		D60399C3C79711BE4395BFFC /* Pods_SwileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2A0337226EA81E454D5BE37 /* Pods-SwileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwileTests.debug.xcconfig"; path = "Target Support Files/Pods-SwileTests/Pods-SwileTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20808DA527B45F30005BD5F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7329121CF302AA315AC8A700 /* Pods_Swile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20808DBB27B45F36005BD5F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51EF4238C1D804B5871C261A /* Pods_SwileTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20808DC527B45F36005BD5F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13EFB85A6F2FE254DBA68A6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFE8BC22E731E45EEF65D8 /* Pods-Swile.debug.xcconfig */,
+				0F8F34A5D32F1DA4F7CECA26 /* Pods-Swile.release.xcconfig */,
+				E2A0337226EA81E454D5BE37 /* Pods-SwileTests.debug.xcconfig */,
+				BC962226DCC970D15F924184 /* Pods-SwileTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		20808D9F27B45F30005BD5F6 = {
+			isa = PBXGroup;
+			children = (
+				20808DAA27B45F30005BD5F6 /* Swile */,
+				20808DC127B45F36005BD5F6 /* SwileTests */,
+				20808DCB27B45F36005BD5F6 /* SwileUITests */,
+				20808DA927B45F30005BD5F6 /* Products */,
+				13EFB85A6F2FE254DBA68A6B /* Pods */,
+				37736BAAB39D38EEBDD9B341 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		20808DA927B45F30005BD5F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20808DA827B45F30005BD5F6 /* Swile.app */,
+				20808DBE27B45F36005BD5F6 /* SwileTests.xctest */,
+				20808DC827B45F36005BD5F6 /* SwileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20808DAA27B45F30005BD5F6 /* Swile */ = {
+			isa = PBXGroup;
+			children = (
+				20808DDB27B46104005BD5F6 /* App */,
+				20808DDE27B461EE005BD5F6 /* Contracts */,
+				20808DE127B462EC005BD5F6 /* Providers */,
+				20808DE627B463CA005BD5F6 /* Models */,
+				20808DE227B4630A005BD5F6 /* SupportingFiles */,
+				20808DE327B4631F005BD5F6 /* Resources */,
+			);
+			path = Swile;
+			sourceTree = "<group>";
+		};
+		20808DC127B45F36005BD5F6 /* SwileTests */ = {
+			isa = PBXGroup;
+			children = (
+				20808DC227B45F36005BD5F6 /* SwileTests.swift */,
+			);
+			path = SwileTests;
+			sourceTree = "<group>";
+		};
+		20808DCB27B45F36005BD5F6 /* SwileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				20808DCC27B45F36005BD5F6 /* SwileUITests.swift */,
+				20808DCE27B45F36005BD5F6 /* SwileUITestsLaunchTests.swift */,
+			);
+			path = SwileUITests;
+			sourceTree = "<group>";
+		};
+		20808DDB27B46104005BD5F6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				20808DDC27B46148005BD5F6 /* AppCoordinator.swift */,
+				20808DAB27B45F30005BD5F6 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		20808DDE27B461EE005BD5F6 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				20808DDF27B461FD005BD5F6 /* Coordinator.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		20808DE127B462EC005BD5F6 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				20808DE427B46343005BD5F6 /* TransfersProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		20808DE227B4630A005BD5F6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				20808DB627B45F35005BD5F6 /* LaunchScreen.storyboard */,
+				20808DB927B45F35005BD5F6 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		20808DE327B4631F005BD5F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				20808DB427B45F35005BD5F6 /* Assets.xcassets */,
+				20808DF227B468A0005BD5F6 /* Localizable.strings */,
+				20808DF527B46AA2005BD5F6 /* Generated */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		20808DE627B463CA005BD5F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20808DE727B463E5005BD5F6 /* Transfer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20808DF527B46AA2005BD5F6 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				20808DF627B46AB4005BD5F6 /* Assets.swift */,
+				20808DF827B46ABE005BD5F6 /* Strings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		37736BAAB39D38EEBDD9B341 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55F658AEC58B41DC3903170E /* Pods_Swile.framework */,
+				D60399C3C79711BE4395BFFC /* Pods_SwileTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20808DA727B45F30005BD5F6 /* Swile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20808DD227B45F36005BD5F6 /* Build configuration list for PBXNativeTarget "Swile" */;
+			buildPhases = (
+				A60DA3BF5D209A654BB74714 /* [CP] Check Pods Manifest.lock */,
+				20808DEB27B467A9005BD5F6 /* SwiftGen */,
+				20808DE927B46788005BD5F6 /* SwiftLint */,
+				20808DA427B45F30005BD5F6 /* Sources */,
+				20808DA527B45F30005BD5F6 /* Frameworks */,
+				20808DA627B45F30005BD5F6 /* Resources */,
+				807D597FD0553D2685B090B9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swile;
+			productName = Swile;
+			productReference = 20808DA827B45F30005BD5F6 /* Swile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20808DBD27B45F36005BD5F6 /* SwileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20808DD527B45F36005BD5F6 /* Build configuration list for PBXNativeTarget "SwileTests" */;
+			buildPhases = (
+				08FAB01907E002B162654912 /* [CP] Check Pods Manifest.lock */,
+				20808DBA27B45F36005BD5F6 /* Sources */,
+				20808DBB27B45F36005BD5F6 /* Frameworks */,
+				20808DBC27B45F36005BD5F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20808DC027B45F36005BD5F6 /* PBXTargetDependency */,
+			);
+			name = SwileTests;
+			productName = SwileTests;
+			productReference = 20808DBE27B45F36005BD5F6 /* SwileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		20808DC727B45F36005BD5F6 /* SwileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20808DD827B45F36005BD5F6 /* Build configuration list for PBXNativeTarget "SwileUITests" */;
+			buildPhases = (
+				20808DC427B45F36005BD5F6 /* Sources */,
+				20808DC527B45F36005BD5F6 /* Frameworks */,
+				20808DC627B45F36005BD5F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20808DCA27B45F36005BD5F6 /* PBXTargetDependency */,
+			);
+			name = SwileUITests;
+			productName = SwileUITests;
+			productReference = 20808DC827B45F36005BD5F6 /* SwileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20808DA027B45F30005BD5F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					20808DA727B45F30005BD5F6 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					20808DBD27B45F36005BD5F6 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 20808DA727B45F30005BD5F6;
+					};
+					20808DC727B45F36005BD5F6 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 20808DA727B45F30005BD5F6;
+					};
+				};
+			};
+			buildConfigurationList = 20808DA327B45F30005BD5F6 /* Build configuration list for PBXProject "Swile" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"pt-BR",
+				fr,
+			);
+			mainGroup = 20808D9F27B45F30005BD5F6;
+			productRefGroup = 20808DA927B45F30005BD5F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20808DA727B45F30005BD5F6 /* Swile */,
+				20808DBD27B45F36005BD5F6 /* SwileTests */,
+				20808DC727B45F36005BD5F6 /* SwileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20808DA627B45F30005BD5F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20808DB827B45F35005BD5F6 /* LaunchScreen.storyboard in Resources */,
+				20808DF027B468A0005BD5F6 /* Localizable.strings in Resources */,
+				20808DB527B45F35005BD5F6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20808DBC27B45F36005BD5F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20808DC627B45F36005BD5F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08FAB01907E002B162654912 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20808DE927B46788005BD5F6 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		20808DEB27B467A9005BD5F6 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/SwiftGen/bin/swiftgen\"\n";
+		};
+		807D597FD0553D2685B090B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swile/Pods-Swile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A60DA3BF5D209A654BB74714 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20808DA427B45F30005BD5F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20808DE027B461FD005BD5F6 /* Coordinator.swift in Sources */,
+				20808DE827B463E5005BD5F6 /* Transfer.swift in Sources */,
+				20808DF727B46AB4005BD5F6 /* Assets.swift in Sources */,
+				20808DE527B46343005BD5F6 /* TransfersProvider.swift in Sources */,
+				20808DDD27B46148005BD5F6 /* AppCoordinator.swift in Sources */,
+				20808DAC27B45F30005BD5F6 /* AppDelegate.swift in Sources */,
+				20808DF927B46ABE005BD5F6 /* Strings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20808DBA27B45F36005BD5F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20808DC327B45F36005BD5F6 /* SwileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20808DC427B45F36005BD5F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20808DCD27B45F36005BD5F6 /* SwileUITests.swift in Sources */,
+				20808DCF27B45F36005BD5F6 /* SwileUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20808DC027B45F36005BD5F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20808DA727B45F30005BD5F6 /* Swile */;
+			targetProxy = 20808DBF27B45F36005BD5F6 /* PBXContainerItemProxy */;
+		};
+		20808DCA27B45F36005BD5F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20808DA727B45F30005BD5F6 /* Swile */;
+			targetProxy = 20808DC927B45F36005BD5F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20808DB627B45F35005BD5F6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20808DB727B45F35005BD5F6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		20808DF227B468A0005BD5F6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20808DF127B468A0005BD5F6 /* en */,
+				20808DF327B468A3005BD5F6 /* fr */,
+				20808DF427B468A4005BD5F6 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20808DD027B45F36005BD5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20808DD127B45F36005BD5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20808DD327B45F36005BD5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDFFE8BC22E731E45EEF65D8 /* Pods-Swile.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKL7YXM7BV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Swile/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fromont.swile.Swile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20808DD427B45F36005BD5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F8F34A5D32F1DA4F7CECA26 /* Pods-Swile.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKL7YXM7BV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Swile/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fromont.swile.Swile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		20808DD627B45F36005BD5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2A0337226EA81E454D5BE37 /* Pods-SwileTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKL7YXM7BV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fromont.swile.SwileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swile.app/Swile";
+			};
+			name = Debug;
+		};
+		20808DD727B45F36005BD5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC962226DCC970D15F924184 /* Pods-SwileTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKL7YXM7BV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fromont.swile.SwileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swile.app/Swile";
+			};
+			name = Release;
+		};
+		20808DD927B45F36005BD5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKL7YXM7BV;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fromont.swile.SwileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Swile;
+			};
+			name = Debug;
+		};
+		20808DDA27B45F36005BD5F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZKL7YXM7BV;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fromont.swile.SwileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Swile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20808DA327B45F30005BD5F6 /* Build configuration list for PBXProject "Swile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20808DD027B45F36005BD5F6 /* Debug */,
+				20808DD127B45F36005BD5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20808DD227B45F36005BD5F6 /* Build configuration list for PBXNativeTarget "Swile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20808DD327B45F36005BD5F6 /* Debug */,
+				20808DD427B45F36005BD5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20808DD527B45F36005BD5F6 /* Build configuration list for PBXNativeTarget "SwileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20808DD627B45F36005BD5F6 /* Debug */,
+				20808DD727B45F36005BD5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20808DD827B45F36005BD5F6 /* Build configuration list for PBXNativeTarget "SwileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20808DD927B45F36005BD5F6 /* Debug */,
+				20808DDA27B45F36005BD5F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20808DA027B45F30005BD5F6 /* Project object */;
+}
