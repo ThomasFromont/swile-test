@@ -1,5 +1,5 @@
 //
-//  TransfersViewController.swift
+//  TransactionsViewController.swift
 //  Swile
 //
 //  Created by Thomas Fromont on 09/02/2022.
@@ -11,21 +11,21 @@ import RxCocoa
 import RxSwift
 import RxSwiftExt
 
-class TransfersViewController: UIViewController {
+class TransactionsViewController: UIViewController {
 
     // MARK: - Properties
 
     private let tableView = UITableView()
     private let disposeBag = DisposeBag()
-    private let viewModel: TransfersViewModel
+    private let viewModel: TransactionsViewModel
     private let styleGuide: StyleGuide
-    private var cells = [TransfersViewModel.Cell]() {
+    private var cells = [TransactionsViewModel.Cell]() {
         didSet {
             tableView.reloadData()
         }
     }
 
-    init(viewModel: TransfersViewModel, styleGuide: StyleGuide) {
+    init(viewModel: TransactionsViewModel, styleGuide: StyleGuide) {
         self.viewModel = viewModel
         self.styleGuide = styleGuide
         super.init(nibName: nil, bundle: nil)
@@ -80,7 +80,7 @@ class TransfersViewController: UIViewController {
     }
 }
 
-extension TransfersViewController: UITableViewDataSource, UITableViewDelegate {
+extension TransactionsViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cells.count

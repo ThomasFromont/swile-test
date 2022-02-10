@@ -8,9 +8,13 @@
 import UIKit
 import Foundation
 
-class FontBook {
+protocol FontBookType: AnyObject {
+    var header: UIFont { get }
+}
 
-    open var header: UIFont { return font(of: 30, with: UIFont.Weight.bold) }
+class FontBook: FontBookType {
+
+    var header: UIFont { return font(of: 30, with: UIFont.Weight.bold) }
 
     // MARK: - Private
 

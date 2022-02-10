@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         coordinator = AppCoordinator(
             window: window,
-            transfersProvider: TransfersProviderExample(),
+            transactionsProvider: TransactionsProvider(),
             styleGuide: StyleGuide.shared
         )
         coordinator?.start()

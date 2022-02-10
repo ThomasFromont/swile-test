@@ -1,5 +1,5 @@
-/* Transfers */
+/* Transactions */
 
-"transfers.header" = "Titres-resto";
+"transactions.header" = "Titres-resto";
 
-/* Transfer */
+/* Transaction */

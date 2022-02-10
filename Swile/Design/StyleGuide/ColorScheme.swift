@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ColorScheme {
+protocol ColorSchemeType: AnyObject {
+    var background: UIColor { get }
+    var textPrimary: UIColor { get }
+}
+
+class ColorScheme: ColorSchemeType {
 
     private enum ColorPalette {
         static let black: UInt32 = 0x000000
@@ -18,11 +23,11 @@ class ColorScheme {
 
     // MARK: - ColorSchemeType
 
-    open var background: UIColor {
+    var background: UIColor {
         return ColorScheme.color(lightHex: ColorPalette.white, darkHex: ColorPalette.black)
     }
 
-    open var textPrimary: UIColor {
+    var textPrimary: UIColor {
         return ColorScheme.color(lightHex: ColorPalette.grey900, darkHex: ColorPalette.grey100)
     }
 }

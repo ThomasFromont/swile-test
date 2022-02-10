@@ -11,9 +11,9 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
-  internal enum Transfers {
+  internal enum Transactions {
     /// Meal vouchers
-    internal static let header = L10n.tr("Localizable", "transfers.header")
+    internal static let header = L10n.tr("Localizable", "transactions.header")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

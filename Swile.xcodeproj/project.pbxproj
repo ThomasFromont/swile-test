@@ -15,13 +15,13 @@
 		20808DCF27B45F36005BD5F6 /* SwileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DCE27B45F36005BD5F6 /* SwileUITestsLaunchTests.swift */; };
 		20808DDD27B46148005BD5F6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DDC27B46148005BD5F6 /* AppCoordinator.swift */; };
 		20808DE027B461FD005BD5F6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DDF27B461FD005BD5F6 /* Coordinator.swift */; };
-		20808DE527B46343005BD5F6 /* TransfersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DE427B46343005BD5F6 /* TransfersProvider.swift */; };
-		20808DE827B463E5005BD5F6 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DE727B463E5005BD5F6 /* Transfer.swift */; };
+		20808DE527B46343005BD5F6 /* TransactionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DE427B46343005BD5F6 /* TransactionsProvider.swift */; };
+		20808DE827B463E5005BD5F6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DE727B463E5005BD5F6 /* Transaction.swift */; };
 		20808DF027B468A0005BD5F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20808DF227B468A0005BD5F6 /* Localizable.strings */; };
 		20808DF727B46AB4005BD5F6 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DF627B46AB4005BD5F6 /* Assets.swift */; };
 		20808DF927B46ABE005BD5F6 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DF827B46ABE005BD5F6 /* Strings.swift */; };
-		20808DFF27B473EC005BD5F6 /* TransfersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DFE27B473EC005BD5F6 /* TransfersViewModel.swift */; };
-		20808E0127B473F5005BD5F6 /* TransfersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0027B473F5005BD5F6 /* TransfersViewController.swift */; };
+		20808DFF27B473EC005BD5F6 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808DFE27B473EC005BD5F6 /* TransactionsViewModel.swift */; };
+		20808E0127B473F5005BD5F6 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0027B473F5005BD5F6 /* TransactionsViewController.swift */; };
 		20808E0627B47659005BD5F6 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0527B47659005BD5F6 /* HeaderCell.swift */; };
 		20808E0827B47661005BD5F6 /* HeaderCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0727B47661005BD5F6 /* HeaderCellViewModel.swift */; };
 		20808E0A27B476E1005BD5F6 /* ObservableType+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E0927B476E1005BD5F6 /* ObservableType+Loading.swift */; };
@@ -31,6 +31,9 @@
 		20808E1627B47D3E005BD5F6 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E1527B47D3E005BD5F6 /* Header.swift */; };
 		20808E1927B47D9A005BD5F6 /* HasData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E1827B47D9A005BD5F6 /* HasData.swift */; };
 		20808E1C27B47FFC005BD5F6 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E1B27B47FFC005BD5F6 /* Reusable.swift */; };
+		20808E1F27B4834A005BD5F6 /* TransactionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E1E27B4834A005BD5F6 /* TransactionsRepository.swift */; };
+		20808E2427B48A5E005BD5F6 /* SmallIconCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E2327B48A5E005BD5F6 /* SmallIconCategory.swift */; };
+		20808E2627B48AF7005BD5F6 /* LargeIconCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E2527B48AF7005BD5F6 /* LargeIconCategory.swift */; };
 		51EF4238C1D804B5871C261A /* Pods_SwileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60399C3C79711BE4395BFFC /* Pods_SwileTests.framework */; };
 		7329121CF302AA315AC8A700 /* Pods_Swile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F658AEC58B41DC3903170E /* Pods_Swile.framework */; };
 /* End PBXBuildFile section */
@@ -66,15 +69,15 @@
 		20808DCE27B45F36005BD5F6 /* SwileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwileUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		20808DDC27B46148005BD5F6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		20808DDF27B461FD005BD5F6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		20808DE427B46343005BD5F6 /* TransfersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersProvider.swift; sourceTree = "<group>"; };
-		20808DE727B463E5005BD5F6 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		20808DE427B46343005BD5F6 /* TransactionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsProvider.swift; sourceTree = "<group>"; };
+		20808DE727B463E5005BD5F6 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		20808DF127B468A0005BD5F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		20808DF327B468A3005BD5F6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		20808DF427B468A4005BD5F6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		20808DF627B46AB4005BD5F6 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		20808DF827B46ABE005BD5F6 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		20808DFE27B473EC005BD5F6 /* TransfersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewModel.swift; sourceTree = "<group>"; };
-		20808E0027B473F5005BD5F6 /* TransfersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfersViewController.swift; sourceTree = "<group>"; };
+		20808DFE27B473EC005BD5F6 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		20808E0027B473F5005BD5F6 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		20808E0527B47659005BD5F6 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		20808E0727B47661005BD5F6 /* HeaderCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellViewModel.swift; sourceTree = "<group>"; };
 		20808E0927B476E1005BD5F6 /* ObservableType+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Loading.swift"; sourceTree = "<group>"; };
@@ -84,6 +87,9 @@
 		20808E1527B47D3E005BD5F6 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		20808E1827B47D9A005BD5F6 /* HasData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasData.swift; sourceTree = "<group>"; };
 		20808E1B27B47FFC005BD5F6 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		20808E1E27B4834A005BD5F6 /* TransactionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRepository.swift; sourceTree = "<group>"; };
+		20808E2327B48A5E005BD5F6 /* SmallIconCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallIconCategory.swift; sourceTree = "<group>"; };
+		20808E2527B48AF7005BD5F6 /* LargeIconCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeIconCategory.swift; sourceTree = "<group>"; };
 		55F658AEC58B41DC3903170E /* Pods_Swile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC962226DCC970D15F924184 /* Pods-SwileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwileTests.release.xcconfig"; path = "Target Support Files/Pods-SwileTests/Pods-SwileTests.release.xcconfig"; sourceTree = "<group>"; };
 		BDFFE8BC22E731E45EEF65D8 /* Pods-Swile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swile.debug.xcconfig"; path = "Target Support Files/Pods-Swile/Pods-Swile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,7 +212,8 @@
 		20808DE127B462EC005BD5F6 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				20808DE427B46343005BD5F6 /* TransfersProvider.swift */,
+				20808DE427B46343005BD5F6 /* TransactionsProvider.swift */,
+				20808E1E27B4834A005BD5F6 /* TransactionsRepository.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -233,7 +240,9 @@
 		20808DE627B463CA005BD5F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				20808DE727B463E5005BD5F6 /* Transfer.swift */,
+				20808DE727B463E5005BD5F6 /* Transaction.swift */,
+				20808E2327B48A5E005BD5F6 /* SmallIconCategory.swift */,
+				20808E2527B48AF7005BD5F6 /* LargeIconCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,18 +259,18 @@
 		20808DFA27B473A0005BD5F6 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				20808DFD27B473DA005BD5F6 /* Transfers */,
+				20808DFD27B473DA005BD5F6 /* Transactions */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		20808DFD27B473DA005BD5F6 /* Transfers */ = {
+		20808DFD27B473DA005BD5F6 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
-				20808DFE27B473EC005BD5F6 /* TransfersViewModel.swift */,
-				20808E0027B473F5005BD5F6 /* TransfersViewController.swift */,
+				20808DFE27B473EC005BD5F6 /* TransactionsViewModel.swift */,
+				20808E0027B473F5005BD5F6 /* TransactionsViewController.swift */,
 			);
-			path = Transfers;
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 		20808E0227B47637005BD5F6 /* UICommons */ = {
@@ -588,11 +597,14 @@
 			files = (
 				20808E1927B47D9A005BD5F6 /* HasData.swift in Sources */,
 				20808E1627B47D3E005BD5F6 /* Header.swift in Sources */,
-				20808E0127B473F5005BD5F6 /* TransfersViewController.swift in Sources */,
+				20808E0127B473F5005BD5F6 /* TransactionsViewController.swift in Sources */,
+				20808E2627B48AF7005BD5F6 /* LargeIconCategory.swift in Sources */,
 				20808DE027B461FD005BD5F6 /* Coordinator.swift in Sources */,
-				20808DE827B463E5005BD5F6 /* Transfer.swift in Sources */,
+				20808DE827B463E5005BD5F6 /* Transaction.swift in Sources */,
+				20808E2427B48A5E005BD5F6 /* SmallIconCategory.swift in Sources */,
+				20808E1F27B4834A005BD5F6 /* TransactionsRepository.swift in Sources */,
 				20808DF727B46AB4005BD5F6 /* Assets.swift in Sources */,
-				20808DE527B46343005BD5F6 /* TransfersProvider.swift in Sources */,
+				20808DE527B46343005BD5F6 /* TransactionsProvider.swift in Sources */,
 				20808DDD27B46148005BD5F6 /* AppCoordinator.swift in Sources */,
 				20808E0627B47659005BD5F6 /* HeaderCell.swift in Sources */,
 				20808E0A27B476E1005BD5F6 /* ObservableType+Loading.swift in Sources */,
@@ -601,7 +613,7 @@
 				20808E1C27B47FFC005BD5F6 /* Reusable.swift in Sources */,
 				20808E1027B47945005BD5F6 /* ColorScheme.swift in Sources */,
 				20808E0827B47661005BD5F6 /* HeaderCellViewModel.swift in Sources */,
-				20808DFF27B473EC005BD5F6 /* TransfersViewModel.swift in Sources */,
+				20808DFF27B473EC005BD5F6 /* TransactionsViewModel.swift in Sources */,
 				20808E0E27B478F5005BD5F6 /* StyleGuide.swift in Sources */,
 				20808E1227B47A31005BD5F6 /* FontBook.swift in Sources */,
 			);

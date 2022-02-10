@@ -10,15 +10,15 @@ import UIKit
 final class AppCoordinator: Coordinator {
 
     private let window: UIWindow?
-    private let transfersProvider: TransfersProvider
+    private let transactionsProvider: TransactionsProviderType
     private let styleGuide: StyleGuide
     private let navigationController = UINavigationController()
 
     // MARK: - Initializers
 
-    init(window: UIWindow?, transfersProvider: TransfersProvider, styleGuide: StyleGuide) {
+    init(window: UIWindow?, transactionsProvider: TransactionsProviderType, styleGuide: StyleGuide) {
         self.window = window
-        self.transfersProvider = transfersProvider
+        self.transactionsProvider = transactionsProvider
         self.styleGuide = styleGuide
     }
 
@@ -26,7 +26,7 @@ final class AppCoordinator: Coordinator {
         navigationController.setNavigationBarHidden(true, animated: false)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        showTransfers()
+        showTransactions()
     }
 
     func close(animated: Bool, completion: (() -> Void)?) {
@@ -34,24 +34,24 @@ final class AppCoordinator: Coordinator {
         completion?()
     }
 
-    private func showTransfers() {
-        let viewModel = TransfersViewModel(transfersProvider: transfersProvider)
+    private func showTransactions() {
+        let viewModel = TransactionsViewModel(transactionsProvider: transactionsProvider)
         viewModel.delegate = self
-        let viewController = TransfersViewController(viewModel: viewModel, styleGuide: styleGuide)
+        let viewController = TransactionsViewController(viewModel: viewModel, styleGuide: styleGuide)
         navigationController.viewControllers = [viewController]
     }
 
-    private func showTransfer(_ transfer: Transfer) {
-        // TODO: - show Transfer screen
-        /*let viewModel = TransferViewModel(transfer: transfer)
+    private func showTransaction(_ transaction: Transaction) {
+        // TODO: - show Transaction screen
+        /*let viewModel = TransactionViewModel(transaction: transaction)
         viewModel.delegate = self
-        let viewController = TransferViewController(viewModel: viewModel)
+        let viewController = TransactionViewController(viewModel: viewModel)
         navigationController.present(viewController, animated: true, completion: nil)*/
     }
 }
 
-extension AppCoordinator: TransfersViewModelDelegate {
-    func didSelect(transfer: Transfer, from viewModel: TransfersViewModel) {
-        showTransfer(transfer)
+extension AppCoordinator: TransactionsViewModelDelegate {
+    func didSelect(transaction: Transaction, from viewModel: TransactionsViewModel) {
+        showTransaction(transaction)
     }
 }
