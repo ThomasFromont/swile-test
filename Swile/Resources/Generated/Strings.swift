@@ -11,6 +11,15 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum DateFormat {
+    /// dd MMMM
+    internal static let dayMonth = L10n.tr("Localizable", "date_format.day_month")
+    /// MMMM
+    internal static let month = L10n.tr("Localizable", "date_format.month")
+    /// MMMM yyyy
+    internal static let monthYear = L10n.tr("Localizable", "date_format.month_year")
+  }
+
   internal enum Transactions {
     /// Meal vouchers
     internal static let header = L10n.tr("Localizable", "transactions.header")

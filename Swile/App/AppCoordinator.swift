@@ -11,14 +11,24 @@ final class AppCoordinator: Coordinator {
 
     private let window: UIWindow?
     private let transactionsProvider: TransactionsProviderType
+    private let dateFormatter: DateFormatterType
+    private let priceFormatter: NumberFormatterType
     private let styleGuide: StyleGuide
     private let navigationController = UINavigationController()
 
     // MARK: - Initializers
 
-    init(window: UIWindow?, transactionsProvider: TransactionsProviderType, styleGuide: StyleGuide) {
+    init(
+        window: UIWindow?,
+        transactionsProvider: TransactionsProviderType,
+        dateFormatter: DateFormatterType,
+        priceFormatter: NumberFormatterType,
+        styleGuide: StyleGuide
+    ) {
         self.window = window
         self.transactionsProvider = transactionsProvider
+        self.dateFormatter = dateFormatter
+        self.priceFormatter = priceFormatter
         self.styleGuide = styleGuide
     }
 
@@ -35,7 +45,11 @@ final class AppCoordinator: Coordinator {
     }
 
     private func showTransactions() {
-        let viewModel = TransactionsViewModel(transactionsProvider: transactionsProvider)
+        let viewModel = TransactionsViewModel(
+            transactionsProvider: transactionsProvider,
+            dateFormatter: dateFormatter,
+            priceFormatter: priceFormatter
+        )
         viewModel.delegate = self
         let viewController = TransactionsViewController(viewModel: viewModel, styleGuide: styleGuide)
         navigationController.viewControllers = [viewController]

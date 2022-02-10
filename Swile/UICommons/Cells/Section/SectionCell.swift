@@ -1,24 +1,24 @@
 //
-//  HeaderCell.swift
+//  SectionCell.swift
 //  Swile
 //
-//  Created by Thomas Fromont on 09/02/2022.
+//  Created by Thomas Fromont on 10/02/2022.
 //
 
 import UIKit
 import SnapKit
 
-final class HeaderCell: UITableViewCell {
+final class SectionCell: UITableViewCell {
 
-    private let header = Header()
+    private let sectionHeader = SectionHeader()
 
-    var viewModel: HeaderCellViewModel? {
+    var viewModel: SectionCellViewModel? {
         didSet {
             guard let viewModel = viewModel else {
                 return
             }
 
-            header.data = .init(title: viewModel.title)
+            sectionHeader.data = .init(title: viewModel.title)
         }
     }
 
@@ -34,13 +34,13 @@ final class HeaderCell: UITableViewCell {
     }
 
     private func setupViews() {
-        contentView.addSubview(header)
+        contentView.addSubview(sectionHeader)
     }
 
     private func setupLayout() {
         layoutMargins = .zero
 
-        header.snp.makeConstraints { make in
+        sectionHeader.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }

@@ -1,5 +1,13 @@
+/* ---------- Commons ---------- */
+
+/* DateFormat */
+
+"date_format.day_month" = "dd MMMM";
+"date_format.month" = "MMMM";
+"date_format.month_year" = "MMMM yyyy";
+
+/* ---------- Features ---------- */
+
 /* Transactions */
 
 "transactions.header" = "Vale refeição";
-
-/* Transaction */

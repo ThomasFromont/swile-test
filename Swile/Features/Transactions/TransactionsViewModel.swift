@@ -17,11 +17,16 @@ final class TransactionsViewModel {
 
     enum Cell {
         case header(HeaderCellViewModel)
+        case transaction(TransactionCellViewModel)
+        case section(SectionCellViewModel)
+        case spacing
     }
 
     // MARK: - Properties
 
     private let transactionsProvider: TransactionsProviderType
+    private let dateFormatter: DateFormatterType
+    private let priceFormatter: NumberFormatterType
 
     private let rx_reloadSubject = PublishSubject<Void>()
     private let rx_transactionSubject = PublishSubject<Transaction>()
@@ -56,8 +61,14 @@ final class TransactionsViewModel {
 
     // MARK: - Initializers
 
-    public init(transactionsProvider: TransactionsProviderType) {
+    public init(
+        transactionsProvider: TransactionsProviderType,
+        dateFormatter: DateFormatterType,
+        priceFormatter: NumberFormatterType
+    ) {
         self.transactionsProvider = transactionsProvider
+        self.dateFormatter = dateFormatter
+        self.priceFormatter = priceFormatter
 
         self.rx_reloadObserver = rx_reloadSubject.asObserver()
         self.rx_transactionObserver = rx_transactionSubject.asObserver()
@@ -92,18 +103,41 @@ final class TransactionsViewModel {
 
     private func makeCells(transactions: [Transaction]) -> [Cell] {
         let headerCell: [Cell] = [ .header(HeaderCellViewModel(title: L10n.Transactions.header)) ]
-        let transactions = makeTransactionsCell(transactions: transactions)
-        return headerCell + transactions
+        let transactionCells = makeTransactionsCell(transactions: transactions)
+        return headerCell + transactionCells
     }
 
     private func makeTransactionsCell(transactions: [Transaction]) -> [Cell] {
-        // TODO: - Create Transactions Cells
-        /*let transactions: [Cell] = transactions.map { transaction in
+        let transactionsOrdered = transactions
+            .sorted(by: { $0.date > $1.date })
+
+        var transactionCells = [Cell]()
+        var currentMonth: String?
+
+        transactionsOrdered.forEach { transaction in
             let selectObserver = rx_transactionObserver.mapObserver { transaction }
-            return Cell.transaction(TransactionCellViewModel(transaction: transaction, selectObserver: selectObserver))
+            let monthString = dateFormatter.formatMonthYearRelative(date: transaction.date, relativeTo: Date())
+
+            if monthString != currentMonth {
+                let sectionCell = Cell.section(SectionCellViewModel(title: monthString))
+                transactionCells.append(.spacing)
+                transactionCells.append(sectionCell)
+                currentMonth = monthString
+            }
+
+            let cell = Cell.transaction(
+                TransactionCellViewModel(
+                    transaction: transaction,
+                    dateFormatter: dateFormatter,
+                    priceFormatter: priceFormatter,
+                    selectObserver: selectObserver
+                )
+            )
+            transactionCells.append(cell)
+
+            transactionCells.append(.spacing)
         }
 
-        return transactions*/
-        return []
+        return transactionCells
     }
 }

@@ -19,8 +19,8 @@ struct Transaction: Decodable {
     let date: Date
     let message: String?
     let amount: Price
-    let smallIcon: SmallIcon
-    let largeIcon: LargeIcon
+    let smallIcon: Icon
+    let largeIcon: Avatar
 
     enum TransactionType: String, Decodable {
     case donation
@@ -41,13 +41,13 @@ struct Transaction: Decodable {
         let title: String
     }
 
-    struct SmallIcon: Decodable {
+    struct Icon: Decodable {
         let url: String?
-        let category: SmallIconCategory
+        let category: IconCategory
     }
 
-    struct LargeIcon: Decodable {
+    struct Avatar: Decodable {
         let url: String?
-        let category: LargeIconCategory
+        let category: AvatarCategory
     }
 }

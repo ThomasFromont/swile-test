@@ -2,9 +2,6 @@ PODS:
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
-  - RxGesture (4.0.3):
-    - RxCocoa (~> 6.0)
-    - RxSwift (~> 6.0)
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
@@ -22,7 +19,6 @@ PODS:
 
 DEPENDENCIES:
   - RxCocoa
-  - RxGesture
   - RxSwift
   - RxSwiftExt
   - SnapKit
@@ -32,7 +28,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - RxCocoa
-    - RxGesture
     - RxRelay
     - RxSwift
     - RxSwiftExt
@@ -42,7 +37,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
-  RxGesture: abadd243fc36db74df43dfc893829ddde94f1a3d
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
@@ -50,6 +44,6 @@ SPEC CHECKSUMS:
   SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
   SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
 
-PODFILE CHECKSUM: f0690fcda736167c12dbb78861d8c47a0fb17f6a
+PODFILE CHECKSUM: 1a65012151c8d765a6057e64ebd94db0e4e34256
 
 COCOAPODS: 1.11.2

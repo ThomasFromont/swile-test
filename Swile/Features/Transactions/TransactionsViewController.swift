@@ -49,6 +49,9 @@ class TransactionsViewController: UIViewController {
         view.backgroundColor = styleGuide.colorScheme.background
 
         tableView.registerReusable(cellClass: HeaderCell.self)
+        tableView.registerReusable(cellClass: SectionCell.self)
+        tableView.registerReusable(cellClass: TransactionCell.self)
+        tableView.registerReusable(cellClass: SpacingCell.self)
 
         tableView.separatorStyle = .none
         tableView.backgroundColor = styleGuide.colorScheme.background
@@ -91,6 +94,17 @@ extension TransactionsViewController: UITableViewDataSource, UITableViewDelegate
         case .header(let viewModel):
             let cell = tableView.dequeueReusableCell(withCellClass: HeaderCell.self, for: indexPath)
             cell.viewModel = viewModel
+            return cell
+        case .section(let viewModel):
+            let cell = tableView.dequeueReusableCell(withCellClass: SectionCell.self, for: indexPath)
+            cell.viewModel = viewModel
+            return cell
+        case .transaction(let viewModel):
+            let cell = tableView.dequeueReusableCell(withCellClass: TransactionCell.self, for: indexPath)
+            cell.viewModel = viewModel
+            return cell
+        case .spacing:
+            let cell = tableView.dequeueReusableCell(withCellClass: SpacingCell.self, for: indexPath)
             return cell
         }
     }

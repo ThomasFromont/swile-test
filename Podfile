@@ -8,7 +8,6 @@ install! 'cocoapods', :disable_input_output_paths => true
 
 target 'Swile' do
     pod 'RxCocoa'
-    pod 'RxGesture'
     pod 'RxSwift'
     pod 'RxSwiftExt'
     pod 'SnapKit'
