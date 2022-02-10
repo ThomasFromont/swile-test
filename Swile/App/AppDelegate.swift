@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         coordinator = AppCoordinator(
             window: window,
-            transactionsProvider: TransactionsProvider(),
+            transactionsRepository: TransactionsRepository(),
             dateFormatter: Swile.DateFormatter(),
             priceFormatter: PriceFormatter(),
             styleGuide: StyleGuide.shared

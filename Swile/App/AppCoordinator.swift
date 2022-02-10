@@ -10,7 +10,7 @@ import UIKit
 final class AppCoordinator: Coordinator {
 
     private let window: UIWindow?
-    private let transactionsProvider: TransactionsProviderType
+    private let transactionsRepository: TransactionsRepositoryType
     private let dateFormatter: DateFormatterType
     private let priceFormatter: NumberFormatterType
     private let styleGuide: StyleGuide
@@ -20,13 +20,13 @@ final class AppCoordinator: Coordinator {
 
     init(
         window: UIWindow?,
-        transactionsProvider: TransactionsProviderType,
+        transactionsRepository: TransactionsRepositoryType,
         dateFormatter: DateFormatterType,
         priceFormatter: NumberFormatterType,
         styleGuide: StyleGuide
     ) {
         self.window = window
-        self.transactionsProvider = transactionsProvider
+        self.transactionsRepository = transactionsRepository
         self.dateFormatter = dateFormatter
         self.priceFormatter = priceFormatter
         self.styleGuide = styleGuide
@@ -46,7 +46,7 @@ final class AppCoordinator: Coordinator {
 
     private func showTransactions() {
         let viewModel = TransactionsViewModel(
-            transactionsProvider: transactionsProvider,
+            transactionsRepository: transactionsRepository,
             dateFormatter: dateFormatter,
             priceFormatter: priceFormatter
         )

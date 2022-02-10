@@ -24,7 +24,7 @@ final class TransactionsViewModel {
 
     // MARK: - Properties
 
-    private let transactionsProvider: TransactionsProviderType
+    private let transactionsRepository: TransactionsRepositoryType
     private let dateFormatter: DateFormatterType
     private let priceFormatter: NumberFormatterType
 
@@ -36,7 +36,7 @@ final class TransactionsViewModel {
 
     // MARK: - Inputs
 
-    var rx_reloadObserver: AnyObserver<Void>?
+    var rx_reloadObserver: AnyObserver<Void>
     let rx_transactionObserver: AnyObserver<Transaction>
 
     // MARK: - Outputs
@@ -62,11 +62,11 @@ final class TransactionsViewModel {
     // MARK: - Initializers
 
     public init(
-        transactionsProvider: TransactionsProviderType,
+        transactionsRepository: TransactionsRepositoryType,
         dateFormatter: DateFormatterType,
         priceFormatter: NumberFormatterType
     ) {
-        self.transactionsProvider = transactionsProvider
+        self.transactionsRepository = transactionsRepository
         self.dateFormatter = dateFormatter
         self.priceFormatter = priceFormatter
 
@@ -77,7 +77,18 @@ final class TransactionsViewModel {
     }
 
     private lazy var rx_transactions: Observable<LoadingResult<[Transaction]>> = {
-        transactionsProvider.rx_transactions.monitorLoading().share()
+        rx_reloadSubject
+            .flatMap { [weak self] _ -> Observable<LoadingResult<[Transaction]>> in
+                guard let self = self else {
+                    return .never()
+                }
+
+                return self
+                    .transactionsRepository
+                    .get()
+                    .monitorLoading()
+            }
+            .share()
     }()
 
     private lazy var rx_loadings = rx_transactions

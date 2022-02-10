@@ -38,7 +38,7 @@ class TransactionsViewController: UIViewController {
         setupConstraints()
         bind()
 
-        viewModel.rx_reloadObserver?.onNext(())
+        viewModel.rx_reloadObserver.onNext(())
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -79,7 +79,7 @@ class TransactionsViewController: UIViewController {
 
     @objc
     private func refreshTableView() {
-        viewModel.rx_reloadObserver?.onNext(())
+        viewModel.rx_reloadObserver.onNext(())
     }
 }
 
