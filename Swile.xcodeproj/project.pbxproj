@@ -46,6 +46,9 @@
 		20AFE44B27B6CAAC00E79E1C /* ItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44A27B6CAAB00E79E1C /* ItemAction.swift */; };
 		20AFE44D27B6D8E900E79E1C /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44C27B6D8E900E79E1C /* Divider.swift */; };
 		20AFE44F27B6DA8500E79E1C /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44E27B6DA8500E79E1C /* TransactionType.swift */; };
+		20AFE45627B7168900E79E1C /* TransactionDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE45527B7168900E79E1C /* TransactionDetailsViewModelTests.swift */; };
+		20AFE45827B7169C00E79E1C /* TransactionDetailsViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE45727B7169C00E79E1C /* TransactionDetailsViewModel+Mock.swift */; };
+		20AFE45A27B716DE00E79E1C /* MockTransactionDetailsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE45927B716DE00E79E1C /* MockTransactionDetailsViewModelDelegate.swift */; };
 		20DF28BA27B503B20008FBA0 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28B927B503B20008FBA0 /* TransactionCell.swift */; };
 		20DF28BC27B503BC0008FBA0 /* TransactionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28BB27B503BC0008FBA0 /* TransactionCellViewModel.swift */; };
 		20DF28BF27B504A30008FBA0 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28BE27B504A30008FBA0 /* DateFormatter.swift */; };
@@ -135,6 +138,9 @@
 		20AFE44A27B6CAAB00E79E1C /* ItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAction.swift; sourceTree = "<group>"; };
 		20AFE44C27B6D8E900E79E1C /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		20AFE44E27B6DA8500E79E1C /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
+		20AFE45527B7168900E79E1C /* TransactionDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		20AFE45727B7169C00E79E1C /* TransactionDetailsViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionDetailsViewModel+Mock.swift"; sourceTree = "<group>"; };
+		20AFE45927B716DE00E79E1C /* MockTransactionDetailsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionDetailsViewModelDelegate.swift; sourceTree = "<group>"; };
 		20DF28B527B503190008FBA0 /* Segma-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-Bold.otf"; sourceTree = "<group>"; };
 		20DF28B627B503190008FBA0 /* Segma-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-SemiBold.otf"; sourceTree = "<group>"; };
 		20DF28B727B503190008FBA0 /* Segma-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-Medium.otf"; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 		20724B2327B57E27000AB821 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				20AFE45427B7167700E79E1C /* TransactionDetails */,
 				20724B2627B57E72000AB821 /* Transactions */,
 			);
 			path = Features;
@@ -494,6 +501,16 @@
 				20DF28D827B553040008FBA0 /* Tag.swift */,
 			);
 			path = Internal;
+			sourceTree = "<group>";
+		};
+		20AFE45427B7167700E79E1C /* TransactionDetails */ = {
+			isa = PBXGroup;
+			children = (
+				20AFE45527B7168900E79E1C /* TransactionDetailsViewModelTests.swift */,
+				20AFE45727B7169C00E79E1C /* TransactionDetailsViewModel+Mock.swift */,
+				20AFE45927B716DE00E79E1C /* MockTransactionDetailsViewModelDelegate.swift */,
+			);
+			path = TransactionDetails;
 			sourceTree = "<group>";
 		};
 		20DF28B827B5039E0008FBA0 /* Transaction */ = {
@@ -825,11 +842,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20AFE45627B7168900E79E1C /* TransactionDetailsViewModelTests.swift in Sources */,
+				20AFE45A27B716DE00E79E1C /* MockTransactionDetailsViewModelDelegate.swift in Sources */,
 				20724B3127B5CCDB000AB821 /* MockTransactionsViewModelDelegate.swift in Sources */,
 				20724B2F27B57FB8000AB821 /* Transaction+Mock.swift in Sources */,
 				20724B2C27B57EF3000AB821 /* MockTransactionsRepository.swift in Sources */,
 				20724B2527B57E4B000AB821 /* TransactionsViewModelTests.swift in Sources */,
 				20724B2827B57E8F000AB821 /* TransactionViewModel+Mock.swift in Sources */,
+				20AFE45827B7169C00E79E1C /* TransactionDetailsViewModel+Mock.swift in Sources */,
 				20724B3427B5CF5D000AB821 /* XCTestCase+Wait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

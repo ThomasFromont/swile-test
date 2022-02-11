@@ -39,19 +39,19 @@ class TransactionsViewModelTests: XCTestCase {
         )
         viewModel.delegate = delegate
 
-        var trancationCell: TransactionsViewModel.Cell?
+        var transactionCell: TransactionsViewModel.Cell?
         viewModel
             .rx_cells
             .drive(onNext: { cells in
                 expectCells.fulfill()
-                trancationCell = cells.first(where: { condition($0) })
+                transactionCell = cells.first(where: { condition($0) })
             })
             .disposed(by: disposeBag)
 
         viewModel.rx_reloadObserver.onNext(())
         wait(for: [expectCells], timeout: XCTestCase.defaultTimeout)
 
-        guard let notNilCell = trancationCell, case .transaction(let transactionCellViewModel) = notNilCell else {
+        guard let notNilCell = transactionCell, case .transaction(let transactionCellViewModel) = notNilCell else {
             return XCTFail("Wrong cell type")
         }
 
