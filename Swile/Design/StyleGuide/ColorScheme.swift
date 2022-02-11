@@ -9,10 +9,12 @@ import UIKit
 
 protocol ColorSchemeType: AnyObject {
     var background: UIColor { get }
+    var navigationButton: UIColor { get }
     var divider: UIColor { get }
 
     var textPrimary: UIColor { get }
     var textSecondary: UIColor { get }
+    var textAction: UIColor { get }
 
     var tintGiftLight: UIColor { get }
     var tintGiftDark: UIColor { get }
@@ -20,6 +22,8 @@ protocol ColorSchemeType: AnyObject {
     var tintMealVoucherDark: UIColor { get }
     var tintMobilityLight: UIColor { get }
     var tintMobilityDark: UIColor { get }
+    var tintNeutralLight: UIColor { get }
+    var tintNeutralDark: UIColor { get }
     var tintPaymentLight: UIColor { get }
     var tintPaymentDark: UIColor { get }
 }
@@ -48,6 +52,9 @@ class ColorScheme: ColorSchemeType {
     var background: UIColor {
         return ColorScheme.color(lightHex: ColorPalette.white, darkHex: ColorPalette.black)
     }
+    var navigationButton: UIColor {
+        return ColorScheme.color(lightHex: ColorPalette.grey900, darkHex: ColorPalette.grey900)
+    }
     var divider: UIColor {
         return ColorScheme.color(lightHex: ColorPalette.grey300, darkHex: ColorPalette.grey700)
     }
@@ -57,6 +64,9 @@ class ColorScheme: ColorSchemeType {
     }
     var textSecondary: UIColor {
         return ColorScheme.color(lightHex: ColorPalette.grey700, darkHex: ColorPalette.grey300)
+    }
+    var textAction: UIColor {
+        return ColorScheme.color(lightHex: ColorPalette.purple500, darkHex: ColorPalette.purple300)
     }
 
     var tintGiftLight: UIColor {
@@ -76,6 +86,12 @@ class ColorScheme: ColorSchemeType {
     }
     var tintMobilityDark: UIColor {
         return ColorScheme.color(lightHex: ColorPalette.red500, darkHex: ColorPalette.red500)
+    }
+    var tintNeutralLight: UIColor {
+        return ColorScheme.color(lightHex: ColorPalette.grey300, darkHex: ColorPalette.grey300)
+    }
+    var tintNeutralDark: UIColor {
+        return ColorScheme.color(lightHex: ColorPalette.grey700, darkHex: ColorPalette.grey700)
     }
     var tintPaymentLight: UIColor {
         return ColorScheme.color(lightHex: ColorPalette.purple300, darkHex: ColorPalette.purple300)

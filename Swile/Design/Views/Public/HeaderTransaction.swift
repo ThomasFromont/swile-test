@@ -15,7 +15,7 @@ final public class HeaderTransaction: UIView, HasData {
         static let subtitleOffset: CGFloat = 4.0
         static let informationOffset: CGFloat = 8.0
         static let imagesContainerHeight: CGFloat = 224.0
-        static let avatarSize = CGSize(width: 144, height: 144)
+        static let imageSize = CGSize(width: 144, height: 144)
         static let avatarOffset: CGFloat = -18.0
         static let iconOffset: CGFloat = -29.0
     }
@@ -42,8 +42,8 @@ final public class HeaderTransaction: UIView, HasData {
 
     private let stackView = UIStackView()
     private let imagesContainer = UIView()
-    private let avatarView = Avatar(size: Constant.avatarSize, withBorder: false)
-    private let iconView = IconView()
+    private let avatarImageView = UIImageView()
+    private let iconView = IconView(iconStyle: .big)
     private let textsContainer = UIView()
     private let titleLabel = UILabel()
     private let subtitleLabel = UILabel()
@@ -55,15 +55,11 @@ final public class HeaderTransaction: UIView, HasData {
     }
 
     public var avatar: UIImage? {
-        didSet {
-            avatarView.image = avatar
-        }
+        didSet { avatarImageView.image = avatar }
     }
 
     public var icon: UIImage? {
-        didSet {
-            iconView.image = icon
-        }
+        didSet { iconView.image = icon }
     }
 
     // MARK: - Initializers
@@ -87,7 +83,7 @@ final public class HeaderTransaction: UIView, HasData {
         stackView.addArrangedSubview(imagesContainer)
         stackView.addArrangedSubview(textsContainer)
 
-        imagesContainer.addSubview(avatarView)
+        imagesContainer.addSubview(avatarImageView)
         imagesContainer.addSubview(iconView)
 
         textsContainer.addSubview(titleLabel)
@@ -106,8 +102,8 @@ final public class HeaderTransaction: UIView, HasData {
             make.height.equalTo(Constant.imagesContainerHeight)
         }
 
-        avatarView.snp.makeConstraints { make in
-            make.size.equalTo(Constant.avatarSize)
+        avatarImageView.snp.makeConstraints { make in
+            make.size.equalTo(Constant.imageSize)
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().offset(Constant.avatarOffset)
         }
@@ -152,6 +148,9 @@ final public class HeaderTransaction: UIView, HasData {
         informationLabel.numberOfLines = 1
         informationLabel.textColor = styleGuide.colorScheme.textSecondary
         informationLabel.textAlignment = .center
+
+        avatarImageView.clipsToBounds = true
+        avatarImageView.layer.cornerRadius = Constant.imageSize.width / 2.5
     }
 
     // MARK: - Update
@@ -161,13 +160,14 @@ final public class HeaderTransaction: UIView, HasData {
         subtitleLabel.text = data?.subtitle
         informationLabel.text = data?.information
 
-        avatarView.tint = data?.tint
+        avatarImageView.tintColor = data?.tint.darkColor
         iconView.tint = data?.tint
         imagesContainer.backgroundColor = data?.tint.lightColor
 
         imagesContainer.hero.id = data?.heroSuffix.map { HeroPrefix.background + $0 }
         imagesContainer.hero.modifiers = [.duration(HeroDuration.medium.rawValue)]
-        avatarView.heroImageSuffix = data?.heroSuffix
+        avatarImageView.hero.id = data?.heroSuffix.map { HeroPrefix.avatarImage + $0 }
+        avatarImageView.hero.modifiers = [.duration(HeroDuration.medium.rawValue)]
         iconView.heroSuffix = data?.heroSuffix
 
         textsContainer.hero.modifiers = [

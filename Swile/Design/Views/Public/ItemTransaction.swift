@@ -14,7 +14,6 @@ final public class ItemTransaction: UIControl, HasData {
         static let insets = UIEdgeInsets(top: 8, left: 20, bottom: 8, right: 20)
         static let spacing: CGFloat = 14
         static let spacingTitles: CGFloat = 2
-        static let avatarSize = CGSize(width: 56, height: 56)
         static let iconBottomInsets = -3.0
         static let iconRightInsets = -5.0
     }
@@ -54,8 +53,8 @@ final public class ItemTransaction: UIControl, HasData {
 
     private let stackView = UIStackView()
     private let imageContainer = UIView()
-    private let avatarView = Avatar(size: Constant.avatarSize)
-    private let iconView = IconView()
+    private let avatarView = Avatar(avatarStyle: .big)
+    private let iconView = IconView(iconStyle: .small)
     private let textContainer = UIView()
     private let textStackView = UIStackView()
     private let titleStackView = UIStackView()
@@ -74,15 +73,11 @@ final public class ItemTransaction: UIControl, HasData {
     }
 
     public var avatar: UIImage? {
-        didSet {
-            avatarView.image = avatar
-        }
+        didSet { avatarView.image = avatar }
     }
 
     public var icon: UIImage? {
-        didSet {
-            iconView.image = icon
-        }
+        didSet { iconView.image = icon }
     }
 
     // MARK: - Initializers
@@ -135,10 +130,6 @@ final public class ItemTransaction: UIControl, HasData {
     private func setupLayout() {
         stackView.snp.makeConstraints { make in
             make.edges.equalToSuperview().inset(Constant.insets)
-        }
-
-        imageContainer.snp.makeConstraints { make in
-            make.size.equalTo(Constant.avatarSize)
         }
 
         avatarView.snp.makeConstraints { make in
@@ -215,8 +206,7 @@ final public class ItemTransaction: UIControl, HasData {
             priceTag.data = .init(text: price, tint: tint)
         }
 
-        avatarView.heroImageSuffix = data?.heroSuffix
-        avatarView.heroBackgroundSuffix = data?.heroSuffix
+        avatarView.heroSuffix = data?.heroSuffix
         iconView.hero.id = data?.heroSuffix.map { HeroPrefix.icon + $0 }
         iconView.hero.modifiers = [.duration(HeroDuration.medium.rawValue)]
     }

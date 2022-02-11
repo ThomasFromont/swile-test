@@ -25,6 +25,7 @@ final class TransactionDetailsViewController: UIViewController {
     private let scrollView = UIScrollView()
     private let closeButton = CloseButton()
     private let header = HeaderTransaction()
+    private let actionsContainer = UIView()
     private let actionsStackView = UIStackView()
 
     // MARK: - Initializer
@@ -53,23 +54,25 @@ final class TransactionDetailsViewController: UIViewController {
         setupLayout()
         setupStyle()
         bind()
+        setupHero()
     }
 
     // MARK: - Setup
 
-    func setupViews() {
+    private func setupViews() {
         view.addSubview(scrollView)
         scrollView.addSubview(header)
         scrollView.addSubview(closeButton)
-        scrollView.addSubview(actionsStackView)
+        scrollView.addSubview(actionsContainer)
+        actionsContainer.addSubview(actionsStackView)
     }
 
-    func setupStyle() {
+    private func setupStyle() {
         view.backgroundColor = styleGuide.colorScheme.background
         actionsStackView.axis = .vertical
     }
 
-    func setupLayout() {
+    private func setupLayout() {
         scrollView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -83,14 +86,18 @@ final class TransactionDetailsViewController: UIViewController {
             make.top.left.equalTo(view.safeAreaLayoutGuide).inset(Constant.closeButtonInsets)
         }
 
-        actionsStackView.snp.makeConstraints { make in
+        actionsContainer.snp.makeConstraints { make in
             make.width.equalToSuperview()
             make.top.equalTo(header.snp.bottom)
             make.left.right.bottom.equalToSuperview()
         }
+
+        actionsStackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 
-    func bind() {
+    private func bind() {
         header.data = .init(
             title: viewModel.price,
             subtitle: viewModel.name,
@@ -98,6 +105,8 @@ final class TransactionDetailsViewController: UIViewController {
             tint: viewModel.tint,
             heroSuffix: viewModel.heroSuffix
         )
+
+        bindActions()
 
         viewModel.rx_avatar
             .drive(onNext: { [weak self] avatar in
@@ -115,5 +124,38 @@ final class TransactionDetailsViewController: UIViewController {
             .controlEvent(.touchUpInside)
             .bind(to: viewModel.rx_closeObserver)
             .disposed(by: disposeBag)
+    }
+
+    private func setupHero() {
+        closeButton.hero.modifiers = [
+            .whenAppearing(.delay(HeroDuration.medium.rawValue)),
+            .duration(HeroDuration.short.rawValue),
+            .fade,
+        ]
+
+        actionsContainer.hero.modifiers = [
+            .whenAppearing(.delay(HeroDuration.long.rawValue)),
+            .duration(HeroDuration.short.rawValue),
+            .translate(y: 10),
+            .fade,
+        ]
+    }
+
+    private func bindActions() {
+        let itemActions: [ItemAction] = viewModel.actions.map { action in
+            let itemAction = ItemAction()
+            itemAction.data = .init(title: action.title, action: action.subtitle, tint: action.tint)
+            itemAction.avatar = action.image
+            return itemAction
+        }
+
+        let dividers = itemActions.dropLast()
+            .map { _ in Divider() }
+
+        let views = zip(itemActions, dividers)
+            .flatMap { [$0, $1] } + [itemActions.last]
+            .compactMap { $0 }
+
+        views.forEach { actionsStackView.addArrangedSubview($0) }
     }
 }

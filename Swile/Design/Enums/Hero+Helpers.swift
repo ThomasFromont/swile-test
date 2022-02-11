@@ -16,4 +16,5 @@ enum HeroPrefix {
 enum HeroDuration: TimeInterval {
     case short = 0.25
     case medium = 0.5
+    case long = 0.75
 }

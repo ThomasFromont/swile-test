@@ -14,7 +14,7 @@ protocol TransactionDetailsViewModelDelegate: AnyObject {
 
 final class TransactionDetailsViewModel {
 
-    typealias Action = (title: String, subtitle: String)
+    typealias Action = (image: UIImage?, title: String, subtitle: String?, tint: Tint)
 
     // MARK: - Properties
 
@@ -86,7 +86,12 @@ final class TransactionDetailsViewModel {
         heroSuffix = [transaction.name, String(transaction.date.timeIntervalSince1970)]
             .joined(separator: "_")
 
-        actions = []
+        actions = [
+            (transaction.smallIcon.category.image, transaction.type.name, L10n.Transaction.changeAccount, tint: transaction.smallIcon.category.tint),
+            (Asset.iconShare.image.withRenderingMode(.alwaysTemplate), L10n.Transaction.share, nil, tint: .neutral),
+            (Asset.iconLove.image.withRenderingMode(.alwaysTemplate), L10n.Transaction.love, nil, tint: .neutral),
+            (Asset.iconQuestion.image.withRenderingMode(.alwaysTemplate), L10n.Transaction.help, nil, tint: .neutral),
+        ]
 
         bindDelegate()
     }

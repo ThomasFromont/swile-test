@@ -13,3 +13,16 @@
 /* Transactions */
 
 "transactions.header" = "Vale refeição";
+
+/* Transactions */
+
+"transaction.donation_name" = "Doação";
+"transaction.gift_name" = "Presente";
+"transaction.meal_voucher_name" = "Vale refeição";
+"transaction.mobility_name" = "Mobilidade";
+"transaction.payment_name" = "Pagamento";
+"transaction.change_account" = "Mudar de conta";
+
+"transaction.share" = "Compartilhamento de contas";
+"transaction.love" = "Gostar";
+"transaction.help" = "Relatar um problema";

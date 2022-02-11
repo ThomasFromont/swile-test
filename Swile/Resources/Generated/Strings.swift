@@ -24,6 +24,27 @@ internal enum L10n {
     internal static let monthYear = L10n.tr("Localizable", "date_format.month_year")
   }
 
+  internal enum Transaction {
+    /// Change account
+    internal static let changeAccount = L10n.tr("Localizable", "transaction.change_account")
+    /// Donation
+    internal static let donationName = L10n.tr("Localizable", "transaction.donation_name")
+    /// Gift
+    internal static let giftName = L10n.tr("Localizable", "transaction.gift_name")
+    /// Report a problem
+    internal static let help = L10n.tr("Localizable", "transaction.help")
+    /// Love
+    internal static let love = L10n.tr("Localizable", "transaction.love")
+    /// Meal Voucher
+    internal static let mealVoucherName = L10n.tr("Localizable", "transaction.meal_voucher_name")
+    /// Mobility
+    internal static let mobilityName = L10n.tr("Localizable", "transaction.mobility_name")
+    /// Payment
+    internal static let paymentName = L10n.tr("Localizable", "transaction.payment_name")
+    /// Bill sharing
+    internal static let share = L10n.tr("Localizable", "transaction.share")
+  }
+
   internal enum Transactions {
     /// Meal vouchers
     internal static let header = L10n.tr("Localizable", "transactions.header")

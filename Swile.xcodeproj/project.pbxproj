@@ -43,6 +43,9 @@
 		20AFE44427B657F700E79E1C /* HeaderTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44327B657F700E79E1C /* HeaderTransaction.swift */; };
 		20AFE44627B663F800E79E1C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44527B663F800E79E1C /* CloseButton.swift */; };
 		20AFE44927B66B2900E79E1C /* Hero+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44827B66B2900E79E1C /* Hero+Helpers.swift */; };
+		20AFE44B27B6CAAC00E79E1C /* ItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44A27B6CAAB00E79E1C /* ItemAction.swift */; };
+		20AFE44D27B6D8E900E79E1C /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44C27B6D8E900E79E1C /* Divider.swift */; };
+		20AFE44F27B6DA8500E79E1C /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44E27B6DA8500E79E1C /* TransactionType.swift */; };
 		20DF28BA27B503B20008FBA0 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28B927B503B20008FBA0 /* TransactionCell.swift */; };
 		20DF28BC27B503BC0008FBA0 /* TransactionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28BB27B503BC0008FBA0 /* TransactionCellViewModel.swift */; };
 		20DF28BF27B504A30008FBA0 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28BE27B504A30008FBA0 /* DateFormatter.swift */; };
@@ -129,6 +132,9 @@
 		20AFE44327B657F700E79E1C /* HeaderTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTransaction.swift; sourceTree = "<group>"; };
 		20AFE44527B663F800E79E1C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		20AFE44827B66B2900E79E1C /* Hero+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hero+Helpers.swift"; sourceTree = "<group>"; };
+		20AFE44A27B6CAAB00E79E1C /* ItemAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAction.swift; sourceTree = "<group>"; };
+		20AFE44C27B6D8E900E79E1C /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		20AFE44E27B6DA8500E79E1C /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
 		20DF28B527B503190008FBA0 /* Segma-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-Bold.otf"; sourceTree = "<group>"; };
 		20DF28B627B503190008FBA0 /* Segma-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-SemiBold.otf"; sourceTree = "<group>"; };
 		20DF28B727B503190008FBA0 /* Segma-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-Medium.otf"; sourceTree = "<group>"; };
@@ -334,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				20808DE727B463E5005BD5F6 /* Transaction.swift */,
+				20AFE44E27B6DA8500E79E1C /* TransactionType.swift */,
 				20808E2327B48A5E005BD5F6 /* IconCategory.swift */,
 				20808E2527B48AF7005BD5F6 /* AvatarCategory.swift */,
 			);
@@ -431,15 +438,8 @@
 		20808E1427B47D32005BD5F6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				20DF28D427B53BBE0008FBA0 /* Avatar.swift */,
-				20808E1527B47D3E005BD5F6 /* Header.swift */,
-				20AFE44327B657F700E79E1C /* HeaderTransaction.swift */,
-				20DF28CE27B531020008FBA0 /* IconView.swift */,
-				20DF28C027B50DD10008FBA0 /* ItemTransaction.swift */,
-				20DF28E327B572600008FBA0 /* SectionHeader.swift */,
-				20DF28DA27B5689B0008FBA0 /* SpaceDivider.swift */,
-				20DF28D827B553040008FBA0 /* Tag.swift */,
-				20AFE44527B663F800E79E1C /* CloseButton.swift */,
+				20AFE45127B7149C00E79E1C /* Internal */,
+				20AFE45027B7149700E79E1C /* Public */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -469,6 +469,31 @@
 				20AFE43F27B64B7A00E79E1C /* TransactionDetailsViewModel.swift */,
 			);
 			path = TransactionDetails;
+			sourceTree = "<group>";
+		};
+		20AFE45027B7149700E79E1C /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				20AFE44527B663F800E79E1C /* CloseButton.swift */,
+				20AFE44C27B6D8E900E79E1C /* Divider.swift */,
+				20808E1527B47D3E005BD5F6 /* Header.swift */,
+				20AFE44327B657F700E79E1C /* HeaderTransaction.swift */,
+				20AFE44A27B6CAAB00E79E1C /* ItemAction.swift */,
+				20DF28C027B50DD10008FBA0 /* ItemTransaction.swift */,
+				20DF28E327B572600008FBA0 /* SectionHeader.swift */,
+				20DF28DA27B5689B0008FBA0 /* SpaceDivider.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		20AFE45127B7149C00E79E1C /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				20DF28D427B53BBE0008FBA0 /* Avatar.swift */,
+				20DF28CE27B531020008FBA0 /* IconView.swift */,
+				20DF28D827B553040008FBA0 /* Tag.swift */,
+			);
+			path = Internal;
 			sourceTree = "<group>";
 		};
 		20DF28B827B5039E0008FBA0 /* Transaction */ = {
@@ -753,6 +778,7 @@
 				20DF28BF27B504A30008FBA0 /* DateFormatter.swift in Sources */,
 				20DF28E027B570E70008FBA0 /* SectionCell.swift in Sources */,
 				20DF28D727B54B490008FBA0 /* NumberFormatter.swift in Sources */,
+				20AFE44D27B6D8E900E79E1C /* Divider.swift in Sources */,
 				20808E1927B47D9A005BD5F6 /* HasData.swift in Sources */,
 				20DF28D527B53BBE0008FBA0 /* Avatar.swift in Sources */,
 				20808E1627B47D3E005BD5F6 /* Header.swift in Sources */,
@@ -783,9 +809,11 @@
 				20DF28D927B553040008FBA0 /* Tag.swift in Sources */,
 				20AFE44927B66B2900E79E1C /* Hero+Helpers.swift in Sources */,
 				20808E0827B47661005BD5F6 /* HeaderCellViewModel.swift in Sources */,
+				20AFE44B27B6CAAC00E79E1C /* ItemAction.swift in Sources */,
 				20DF28C127B50DD10008FBA0 /* ItemTransaction.swift in Sources */,
 				20808DFF27B473EC005BD5F6 /* TransactionsViewModel.swift in Sources */,
 				20DF28E427B572600008FBA0 /* SectionHeader.swift in Sources */,
+				20AFE44F27B6DA8500E79E1C /* TransactionType.swift in Sources */,
 				20808E0E27B478F5005BD5F6 /* StyleGuide.swift in Sources */,
 				20DF28CC27B522450008FBA0 /* ImageProvider.swift in Sources */,
 				20AFE44227B64B8400E79E1C /* TransactionDetailsViewController.swift in Sources */,

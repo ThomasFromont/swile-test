@@ -9,6 +9,32 @@ import UIKit
 
 final class Avatar: UIView {
 
+    enum Constant {
+        static let smallInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+        static let bigInsets = UIEdgeInsets.zero
+        static let smallSize = CGSize(width: 32, height: 32)
+        static let bigSize = CGSize(width: 56, height: 56)
+    }
+
+    enum AvatarStyle {
+        case small
+        case big
+
+        var size: CGSize {
+            switch self {
+            case .small: return Constant.smallSize
+            case .big: return Constant.bigSize
+            }
+        }
+
+        var insets: UIEdgeInsets {
+            switch self {
+            case .small: return Constant.smallInsets
+            case .big: return Constant.bigInsets
+            }
+        }
+    }
+
     // MARK: - Properties
 
     var tint: Tint? {
@@ -27,31 +53,24 @@ final class Avatar: UIView {
         didSet { imageView.image = image }
     }
 
-    var heroBackgroundSuffix: String? {
+    var heroSuffix: String? {
         didSet {
-            backgroundView.hero.id = heroBackgroundSuffix.map { HeroPrefix.background + $0 }
+            backgroundView.hero.id = heroSuffix.map { HeroPrefix.background + $0 }
             backgroundView.hero.modifiers = [.duration(HeroDuration.medium.rawValue)]
-        }
-    }
-
-    var heroImageSuffix: String? {
-        didSet {
-            imageView.hero.id = heroImageSuffix.map { HeroPrefix.avatarImage + $0 }
+            imageView.hero.id = heroSuffix.map { HeroPrefix.avatarImage + $0 }
             imageView.hero.modifiers = [.duration(HeroDuration.medium.rawValue)]
         }
     }
 
-    private let size: CGSize
-    private let withBorder: Bool
+    private let avatarStyle: AvatarStyle
 
     private let imageView = UIImageView()
     private let backgroundView = UIView()
 
     // MARK: - Initializers
 
-    public init(size: CGSize, withBorder: Bool = true) {
-        self.size = size
-        self.withBorder = withBorder
+    public init(avatarStyle: AvatarStyle) {
+        self.avatarStyle = avatarStyle
 
         super.init(frame: .zero)
 
@@ -74,12 +93,16 @@ final class Avatar: UIView {
     // MARK: - Layout
 
     private func setupLayout() {
+        self.snp.makeConstraints { make in
+            make.size.equalTo(avatarStyle.size)
+        }
+
         backgroundView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
 
         imageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalToSuperview().inset(avatarStyle.insets)
         }
     }
 
@@ -87,15 +110,11 @@ final class Avatar: UIView {
 
     private func setupStyle() {
         clipsToBounds = true
-        setContentHuggingPriority(.required, for: .vertical)
-        setContentHuggingPriority(.required, for: .horizontal)
-        setContentCompressionResistancePriority(.required, for: .horizontal)
-        setContentCompressionResistancePriority(.required, for: .vertical)
-        layer.cornerRadius = size.width / 2.5
-        layer.borderWidth = withBorder ? 1 : 0
+        layer.cornerRadius = avatarStyle.size.width / 2.5
+        layer.borderWidth = 1
 
-        imageView.layer.cornerRadius = size.width / 2.5
-        backgroundView.layer.cornerRadius = size.width / 2.5
+        imageView.layer.cornerRadius = avatarStyle.size.width / 2.5
+        backgroundView.layer.cornerRadius = avatarStyle.size.width / 2.5
 
         imageView.contentMode = .scaleAspectFit
     }

@@ -60,9 +60,12 @@ Clean code is quite important to me, that is why the first thing I add in a proj
 - ~1h to implement the testing of the `TransactionViewModel`
 - ~1h to create the second VM + VC with the detailed header
 - ~1h handle animation between the two screens using Hero
+- ~1h display the actions list on the transaction details
 
 ### What I would like to do next 🤔
 
-- Finish the Transaction Detail screen
+- Improve dismissing animation
+- Implement the loadings and refresh on transactions screen
+- Implement an empty state on transactions screen
 - Add more testing. (`DateFormatter`, `TransactionsRepository`, ...)
 - Add SnapshotTesting for Design Components

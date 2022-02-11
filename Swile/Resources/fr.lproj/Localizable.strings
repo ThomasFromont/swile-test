@@ -13,3 +13,16 @@
 /* Transactions */
 
 "transactions.header" = "Titres-resto";
+
+/* Transactions */
+
+"transaction.donation_name" = "Don";
+"transaction.gift_name" = "Cadeau";
+"transaction.meal_voucher_name" = "Titres-resto";
+"transaction.mobility_name" = "Transport";
+"transaction.payment_name" = "Paiement";
+"transaction.change_account" = "Changer de compte";
+
+"transaction.share" = "Partage d’addition";
+"transaction.love" = "Aimer";
+"transaction.help" = "Signaler un problème";

@@ -52,6 +52,6 @@ final public class CloseButton: UIControl {
     private func setupStyle() {
         backgroundColor = .clear
         imageView.image = Asset.iconChevronDown.image.withRenderingMode(.alwaysTemplate)
-        imageView.tintColor = styleGuide.colorScheme.textPrimary
+        imageView.tintColor = styleGuide.colorScheme.navigationButton
     }
 }

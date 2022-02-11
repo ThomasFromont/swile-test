@@ -13,3 +13,16 @@
 /* Transactions */
 
 "transactions.header" = "Meal vouchers";
+
+/* Transaction */
+
+"transaction.donation_name" = "Donation";
+"transaction.gift_name" = "Gift";
+"transaction.meal_voucher_name" = "Meal Voucher";
+"transaction.mobility_name" = "Mobility";
+"transaction.payment_name" = "Payment";
+"transaction.change_account" = "Change account";
+
+"transaction.share" = "Bill sharing";
+"transaction.love" = "Love";
+"transaction.help" = "Report a problem";

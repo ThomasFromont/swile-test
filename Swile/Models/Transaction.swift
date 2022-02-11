@@ -22,14 +22,6 @@ struct Transaction: Decodable {
     let smallIcon: Icon
     let largeIcon: Avatar
 
-    enum TransactionType: String, Decodable {
-    case donation
-    case gift
-    case mealVoucher = "meal_voucher"
-    case mobility
-    case payment
-    }
-
     struct Price: Decodable {
         let value: Double
         let currency: Currency

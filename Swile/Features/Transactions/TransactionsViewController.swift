@@ -45,7 +45,7 @@ class TransactionsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupView() {
+    private func setupView() {
         view.backgroundColor = styleGuide.colorScheme.background
 
         tableView.registerReusable(cellClass: HeaderCell.self)
@@ -63,13 +63,13 @@ class TransactionsViewController: UIViewController {
         view.addSubview(tableView)
     }
 
-    func setupConstraints() {
+    private func setupConstraints() {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
 
-    func bind() {
+    private func bind() {
         viewModel.rx_cells
             .drive(onNext: { [weak self] cells in
                 self?.cells = cells

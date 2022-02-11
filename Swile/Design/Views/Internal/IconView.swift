@@ -10,7 +10,29 @@ import UIKit
 final class IconView: UIView {
 
     private enum Constant {
-        static let size = CGSize(width: 22.0, height: 22.0)
+        static let smallSize = CGSize(width: 22.0, height: 22.0)
+        static let smallImageSize = CGSize(width: 16.0, height: 16.0)
+        static let bigSize = CGSize(width: 30.0, height: 30.0)
+        static let bigImageSize = CGSize(width: 24.0, height: 24.0)
+    }
+
+    enum IconStyle {
+        case small
+        case big
+
+        var size: CGSize {
+            switch self {
+            case .small: return Constant.smallSize
+            case .big: return Constant.bigSize
+            }
+        }
+
+        var imageSize: CGSize {
+            switch self {
+            case .small: return Constant.smallImageSize
+            case .big: return Constant.bigImageSize
+            }
+        }
     }
 
     // MARK: - Properties
@@ -30,11 +52,15 @@ final class IconView: UIView {
         }
     }
 
-    private let iconImageView = IconImageView()
+    private let iconStyle: IconStyle
+    private let iconImageView: IconImageView
 
     // MARK: - Initializers
 
-    public init() {
+    init(iconStyle: IconStyle) {
+        self.iconStyle = iconStyle
+        self.iconImageView = IconImageView(iconStyle: iconStyle)
+
         super.init(frame: .zero)
 
         setupHierarchy()
@@ -56,7 +82,7 @@ final class IconView: UIView {
 
     private func setupLayout() {
         self.snp.makeConstraints { make in
-            make.size.equalTo(Constant.size)
+            make.size.equalTo(iconStyle.size)
         }
 
         iconImageView.snp.makeConstraints { make in
@@ -70,32 +96,26 @@ final class IconView: UIView {
         backgroundColor = StyleGuide.shared.colorScheme.background
 
         clipsToBounds = true
-        setContentHuggingPriority(.required, for: .vertical)
-        setContentHuggingPriority(.required, for: .horizontal)
-        setContentCompressionResistancePriority(.required, for: .horizontal)
-        setContentCompressionResistancePriority(.required, for: .vertical)
-        layer.cornerRadius = Constant.size.width / 2
+        layer.cornerRadius = iconStyle.size.width / 2
     }
 }
 
 private final class IconImageView: UIImageView {
 
-    private enum Constant {
-        static let size = CGSize(width: 16.0, height: 16.0)
-    }
+    // MARK: - Properties
+
+    private let iconStyle: IconView.IconStyle
 
     // MARK: - Initializers
 
-    init() {
+    init(iconStyle: IconView.IconStyle) {
+        self.iconStyle = iconStyle
+
         super.init(image: nil)
 
         clipsToBounds = true
-        setContentHuggingPriority(.required, for: .vertical)
-        setContentHuggingPriority(.required, for: .horizontal)
-        setContentCompressionResistancePriority(.required, for: .horizontal)
-        setContentCompressionResistancePriority(.required, for: .vertical)
 
-        layer.cornerRadius = Constant.size.width / 2
+        layer.cornerRadius = iconStyle.imageSize.width / 2
         contentMode = .scaleAspectFit
     }
 
@@ -106,6 +126,6 @@ private final class IconImageView: UIImageView {
     // MARK: - Override
 
     override var intrinsicContentSize: CGSize {
-        return Constant.size
+        return iconStyle.imageSize
     }
 }
