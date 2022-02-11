@@ -9,10 +9,6 @@ import UIKit
 
 final class Avatar: UIImageView {
 
-    private enum Constant {
-        static let size = CGSize(width: 56.0, height: 56.0)
-    }
-
     // MARK: - Properties
 
     var tint: Tint? {
@@ -27,24 +23,22 @@ final class Avatar: UIImageView {
         }
     }
 
+    private let size: CGSize
+    private let withBorder: Bool
+
     // MARK: - Initializers
 
-    public init() {
+    public init(size: CGSize, withBorder: Bool = true) {
+        self.size = size
+        self.withBorder = withBorder
+
         super.init(image: nil)
 
-        setupLayout()
         setupStyle()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    // MARK: - Layout
-
-    private func setupLayout() {
-        self.snp.makeConstraints { make in
-            make.size.equalTo(Constant.size)
-        }
     }
 
     // MARK: - Style
@@ -57,8 +51,8 @@ final class Avatar: UIImageView {
         setContentHuggingPriority(.required, for: .horizontal)
         setContentCompressionResistancePriority(.required, for: .horizontal)
         setContentCompressionResistancePriority(.required, for: .vertical)
-        layer.cornerRadius = Constant.size.width / 2.5
+        layer.cornerRadius = size.width / 2.5
 
-        layer.borderWidth = 1.0
+        layer.borderWidth = withBorder ? 1 : 0
     }
 }

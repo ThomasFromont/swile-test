@@ -29,6 +29,7 @@ final class TransactionCellViewModel {
         transaction: Transaction,
         dateFormatter: DateFormatterType,
         priceFormatter: NumberFormatterType,
+        imageProvider: ImageProviderType,
         selectObserver: AnyObserver<Void>
     ) {
         self.title = transaction.name
@@ -49,14 +50,14 @@ final class TransactionCellViewModel {
         self.tint = transaction.smallIcon.category.tint
         self.selectObserver = selectObserver
 
-        self.rx_icon = ImageProvider
+        self.rx_icon = imageProvider
             .rx_image(
                 from: transaction.smallIcon.url,
                 defaultImage: transaction.smallIcon.category.image
             )
             .asDriver(onErrorDriveWith: .never())
 
-        self.rx_avatar = ImageProvider
+        self.rx_avatar = imageProvider
             .rx_image(
                 from: transaction.largeIcon.url,
                 defaultImage: transaction.largeIcon.category.image

@@ -12,6 +12,7 @@ protocol FontBookType: AnyObject {
     var header: UIFont { get }
     var sectionHeader: UIFont { get }
     var title: UIFont { get }
+    var titleSmall: UIFont { get }
     var subtitle: UIFont { get }
 }
 
@@ -20,6 +21,7 @@ class FontBook: FontBookType {
     var header: UIFont { return font(of: 34, with: UIFont.Weight.bold) }
     var sectionHeader: UIFont { return font(of: 13, with: UIFont.Weight.medium) }
     var title: UIFont { return font(of: 15, with: UIFont.Weight.medium) }
+    var titleSmall: UIFont { return font(of: 13, with: UIFont.Weight.semibold) }
     var subtitle: UIFont { return font(of: 12, with: UIFont.Weight.medium) }
 
     // MARK: - Private

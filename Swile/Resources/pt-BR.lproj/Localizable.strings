@@ -3,6 +3,8 @@
 /* DateFormat */
 
 "date_format.day_month" = "dd MMMM";
+"date_format.full_with_year" = "EEEE dd MMMM yyyy, HH:mm";
+"date_format.full_without_year" = "EEEE dd MMMM, HH:mm";
 "date_format.month" = "MMMM";
 "date_format.month_year" = "MMMM yyyy";
 

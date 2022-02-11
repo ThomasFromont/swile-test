@@ -13,6 +13,7 @@ final class AppCoordinator: Coordinator {
     private let transactionsRepository: TransactionsRepositoryType
     private let dateFormatter: DateFormatterType
     private let priceFormatter: NumberFormatterType
+    private let imageProvider: ImageProviderType
     private let styleGuide: StyleGuide
     private let navigationController = UINavigationController()
 
@@ -23,12 +24,14 @@ final class AppCoordinator: Coordinator {
         transactionsRepository: TransactionsRepositoryType,
         dateFormatter: DateFormatterType,
         priceFormatter: NumberFormatterType,
+        imageProvider: ImageProviderType,
         styleGuide: StyleGuide
     ) {
         self.window = window
         self.transactionsRepository = transactionsRepository
         self.dateFormatter = dateFormatter
         self.priceFormatter = priceFormatter
+        self.imageProvider = imageProvider
         self.styleGuide = styleGuide
     }
 
@@ -48,24 +51,36 @@ final class AppCoordinator: Coordinator {
         let viewModel = TransactionsViewModel(
             transactionsRepository: transactionsRepository,
             dateFormatter: dateFormatter,
-            priceFormatter: priceFormatter
+            priceFormatter: priceFormatter,
+            imageProvider: imageProvider
         )
         viewModel.delegate = self
         let viewController = TransactionsViewController(viewModel: viewModel, styleGuide: styleGuide)
         navigationController.viewControllers = [viewController]
     }
 
-    private func showTransaction(_ transaction: Transaction) {
-        // TODO: - show Transaction screen
-        /*let viewModel = TransactionViewModel(transaction: transaction)
+    private func showTransactionDetails(_ transaction: Transaction) {
+        let viewModel = TransactionDetailsViewModel(
+            transaction: transaction,
+            dateFormatter: dateFormatter,
+            priceFormatter: priceFormatter,
+            imageProvider: imageProvider
+        )
         viewModel.delegate = self
-        let viewController = TransactionViewController(viewModel: viewModel)
-        navigationController.present(viewController, animated: true, completion: nil)*/
+        let viewController = TransactionDetailsViewController(viewModel: viewModel, styleGuide: styleGuide)
+        viewController.modalPresentationStyle = .fullScreen
+        navigationController.present(viewController, animated: true, completion: nil)
     }
 }
 
 extension AppCoordinator: TransactionsViewModelDelegate {
     func didSelect(transaction: Transaction, from viewModel: TransactionsViewModel) {
-        showTransaction(transaction)
+        showTransactionDetails(transaction)
+    }
+}
+
+extension AppCoordinator: TransactionDetailsViewModelDelegate {
+    func didSelectClose(from viewModel: TransactionDetailsViewModel) {
+        navigationController.dismiss(animated: true, completion: nil)
     }
 }

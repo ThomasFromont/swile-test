@@ -14,7 +14,8 @@ extension TransactionsViewModel {
         return TransactionsViewModel(
             transactionsRepository: transactionsRepository,
             dateFormatter: DateFormatter(),
-            priceFormatter: PriceFormatter()
+            priceFormatter: PriceFormatter(),
+            imageProvider: ImageProvider()
         )
     }
 }

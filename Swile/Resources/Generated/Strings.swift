@@ -14,6 +14,10 @@ internal enum L10n {
   internal enum DateFormat {
     /// dd MMMM
     internal static let dayMonth = L10n.tr("Localizable", "date_format.day_month")
+    /// EEEE dd MMMM yyyy, HH:mm
+    internal static let fullWithYear = L10n.tr("Localizable", "date_format.full_with_year")
+    /// EEEE dd MMMM, HH:mm
+    internal static let fullWithoutYear = L10n.tr("Localizable", "date_format.full_without_year")
     /// MMMM
     internal static let month = L10n.tr("Localizable", "date_format.month")
     /// MMMM yyyy

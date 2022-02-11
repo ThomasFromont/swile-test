@@ -38,6 +38,10 @@
 		20808E1F27B4834A005BD5F6 /* TransactionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E1E27B4834A005BD5F6 /* TransactionsRepository.swift */; };
 		20808E2427B48A5E005BD5F6 /* IconCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E2327B48A5E005BD5F6 /* IconCategory.swift */; };
 		20808E2627B48AF7005BD5F6 /* AvatarCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20808E2527B48AF7005BD5F6 /* AvatarCategory.swift */; };
+		20AFE44027B64B7A00E79E1C /* TransactionDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE43F27B64B7A00E79E1C /* TransactionDetailsViewModel.swift */; };
+		20AFE44227B64B8400E79E1C /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44127B64B8400E79E1C /* TransactionDetailsViewController.swift */; };
+		20AFE44427B657F700E79E1C /* HeaderTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44327B657F700E79E1C /* HeaderTransaction.swift */; };
+		20AFE44627B663F800E79E1C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44527B663F800E79E1C /* CloseButton.swift */; };
 		20DF28BA27B503B20008FBA0 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28B927B503B20008FBA0 /* TransactionCell.swift */; };
 		20DF28BC27B503BC0008FBA0 /* TransactionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28BB27B503BC0008FBA0 /* TransactionCellViewModel.swift */; };
 		20DF28BF27B504A30008FBA0 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28BE27B504A30008FBA0 /* DateFormatter.swift */; };
@@ -119,6 +123,10 @@
 		20808E1E27B4834A005BD5F6 /* TransactionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRepository.swift; sourceTree = "<group>"; };
 		20808E2327B48A5E005BD5F6 /* IconCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCategory.swift; sourceTree = "<group>"; };
 		20808E2527B48AF7005BD5F6 /* AvatarCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCategory.swift; sourceTree = "<group>"; };
+		20AFE43F27B64B7A00E79E1C /* TransactionDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewModel.swift; sourceTree = "<group>"; };
+		20AFE44127B64B8400E79E1C /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
+		20AFE44327B657F700E79E1C /* HeaderTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTransaction.swift; sourceTree = "<group>"; };
+		20AFE44527B663F800E79E1C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		20DF28B527B503190008FBA0 /* Segma-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-Bold.otf"; sourceTree = "<group>"; };
 		20DF28B627B503190008FBA0 /* Segma-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-SemiBold.otf"; sourceTree = "<group>"; };
 		20DF28B727B503190008FBA0 /* Segma-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-Medium.otf"; sourceTree = "<group>"; };
@@ -342,6 +350,7 @@
 		20808DFA27B473A0005BD5F6 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				20AFE43E27B64B6700E79E1C /* TransactionDetails */,
 				20808DFD27B473DA005BD5F6 /* Transactions */,
 			);
 			path = Features;
@@ -350,8 +359,8 @@
 		20808DFD27B473DA005BD5F6 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
-				20808DFE27B473EC005BD5F6 /* TransactionsViewModel.swift */,
 				20808E0027B473F5005BD5F6 /* TransactionsViewController.swift */,
+				20808DFE27B473EC005BD5F6 /* TransactionsViewModel.swift */,
 				20808E1E27B4834A005BD5F6 /* TransactionsRepository.swift */,
 			);
 			path = Transactions;
@@ -422,11 +431,13 @@
 			children = (
 				20DF28D427B53BBE0008FBA0 /* Avatar.swift */,
 				20808E1527B47D3E005BD5F6 /* Header.swift */,
+				20AFE44327B657F700E79E1C /* HeaderTransaction.swift */,
 				20DF28CE27B531020008FBA0 /* IconView.swift */,
 				20DF28C027B50DD10008FBA0 /* ItemTransaction.swift */,
 				20DF28E327B572600008FBA0 /* SectionHeader.swift */,
 				20DF28DA27B5689B0008FBA0 /* SpaceDivider.swift */,
 				20DF28D827B553040008FBA0 /* Tag.swift */,
+				20AFE44527B663F800E79E1C /* CloseButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -447,6 +458,15 @@
 				20DF28D627B54B490008FBA0 /* NumberFormatter.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		20AFE43E27B64B6700E79E1C /* TransactionDetails */ = {
+			isa = PBXGroup;
+			children = (
+				20AFE44127B64B8400E79E1C /* TransactionDetailsViewController.swift */,
+				20AFE43F27B64B7A00E79E1C /* TransactionDetailsViewModel.swift */,
+			);
+			path = TransactionDetails;
 			sourceTree = "<group>";
 		};
 		20DF28B827B5039E0008FBA0 /* Transaction */ = {
@@ -733,6 +753,7 @@
 				20808E1927B47D9A005BD5F6 /* HasData.swift in Sources */,
 				20DF28D527B53BBE0008FBA0 /* Avatar.swift in Sources */,
 				20808E1627B47D3E005BD5F6 /* Header.swift in Sources */,
+				20AFE44627B663F800E79E1C /* CloseButton.swift in Sources */,
 				20808E0127B473F5005BD5F6 /* TransactionsViewController.swift in Sources */,
 				20808E2627B48AF7005BD5F6 /* AvatarCategory.swift in Sources */,
 				20808DE027B461FD005BD5F6 /* Coordinator.swift in Sources */,
@@ -740,6 +761,7 @@
 				20808E2427B48A5E005BD5F6 /* IconCategory.swift in Sources */,
 				20DF28DD27B569360008FBA0 /* SpacingCell.swift in Sources */,
 				20808E1F27B4834A005BD5F6 /* TransactionsRepository.swift in Sources */,
+				20AFE44427B657F700E79E1C /* HeaderTransaction.swift in Sources */,
 				20DF28BC27B503BC0008FBA0 /* TransactionCellViewModel.swift in Sources */,
 				20808DF727B46AB4005BD5F6 /* Assets.swift in Sources */,
 				20DF28E227B570F30008FBA0 /* SectionCellViewModel.swift in Sources */,
@@ -747,6 +769,7 @@
 				20808DDD27B46148005BD5F6 /* AppCoordinator.swift in Sources */,
 				20DF28CF27B531020008FBA0 /* IconView.swift in Sources */,
 				20808E0627B47659005BD5F6 /* HeaderCell.swift in Sources */,
+				20AFE44027B64B7A00E79E1C /* TransactionDetailsViewModel.swift in Sources */,
 				20DF28DB27B5689B0008FBA0 /* SpaceDivider.swift in Sources */,
 				20DF28BA27B503B20008FBA0 /* TransactionCell.swift in Sources */,
 				20808E0A27B476E1005BD5F6 /* ObservableType+Loading.swift in Sources */,
@@ -761,6 +784,7 @@
 				20DF28E427B572600008FBA0 /* SectionHeader.swift in Sources */,
 				20808E0E27B478F5005BD5F6 /* StyleGuide.swift in Sources */,
 				20DF28CC27B522450008FBA0 /* ImageProvider.swift in Sources */,
+				20AFE44227B64B8400E79E1C /* TransactionDetailsViewController.swift in Sources */,
 				20808E1227B47A31005BD5F6 /* FontBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

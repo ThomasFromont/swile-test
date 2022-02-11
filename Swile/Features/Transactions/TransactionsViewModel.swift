@@ -27,6 +27,7 @@ final class TransactionsViewModel {
     private let transactionsRepository: TransactionsRepositoryType
     private let dateFormatter: DateFormatterType
     private let priceFormatter: NumberFormatterType
+    private let imageProvider: ImageProviderType
 
     private let rx_reloadSubject = PublishSubject<Void>()
     private let rx_transactionSubject = PublishSubject<Transaction>()
@@ -64,11 +65,13 @@ final class TransactionsViewModel {
     public init(
         transactionsRepository: TransactionsRepositoryType,
         dateFormatter: DateFormatterType,
-        priceFormatter: NumberFormatterType
+        priceFormatter: NumberFormatterType,
+        imageProvider: ImageProviderType
     ) {
         self.transactionsRepository = transactionsRepository
         self.dateFormatter = dateFormatter
         self.priceFormatter = priceFormatter
+        self.imageProvider = imageProvider
 
         self.rx_reloadObserver = rx_reloadSubject.asObserver()
         self.rx_transactionObserver = rx_transactionSubject.asObserver()
@@ -141,6 +144,7 @@ final class TransactionsViewModel {
                     transaction: transaction,
                     dateFormatter: dateFormatter,
                     priceFormatter: priceFormatter,
+                    imageProvider: imageProvider,
                     selectObserver: selectObserver
                 )
             )

@@ -8,9 +8,12 @@
 import Foundation
 import RxSwift
 
-class ImageProvider {
+protocol ImageProviderType: AnyObject {
+    func rx_image(from url: String?, defaultImage: UIImage?) -> Observable<UIImage?>
+}
 
-    static func rx_image(from url: String?, defaultImage: UIImage?) -> Observable<UIImage?> {
+class ImageProvider: ImageProviderType {
+    func rx_image(from url: String?, defaultImage: UIImage?) -> Observable<UIImage?> {
         guard let urlString = url, let url = URL(string: urlString) else {
             return .just(defaultImage)
         }

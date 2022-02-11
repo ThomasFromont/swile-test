@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             transactionsRepository: TransactionsRepository(),
             dateFormatter: Swile.DateFormatter(),
             priceFormatter: PriceFormatter(),
+            imageProvider: ImageProvider(),
             styleGuide: StyleGuide.shared
         )
         coordinator?.start()

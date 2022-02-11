@@ -10,6 +10,7 @@ import Foundation
 public protocol DateFormatterType {
     func formatDayMonth(date: Date) -> String
     func formatMonthYearRelative(date: Date, relativeTo referenceDate: Date) -> String
+    func formatFullRelative(date: Date, relativeTo referenceDate: Date) -> String
 }
 
 public final class DateFormatter: DateFormatterType {
@@ -30,6 +31,13 @@ public final class DateFormatter: DateFormatterType {
         let shouldIncludeYear = !calendar.isDate(date, equalTo: referenceDate, toGranularity: .year)
 
         let dateFormat: DateFormat = shouldIncludeYear ? .monthYear : .month
+        return dateFormatter(for: dateFormat).string(from: date)
+    }
+
+    public func formatFullRelative(date: Date, relativeTo referenceDate: Date) -> String {
+        let shouldIncludeYear = !calendar.isDate(date, equalTo: referenceDate, toGranularity: .year)
+
+        let dateFormat: DateFormat = shouldIncludeYear ? .fullWithYear : .fullWithoutYear
         return dateFormatter(for: dateFormat).string(from: date)
     }
 
@@ -54,12 +62,16 @@ public final class DateFormatter: DateFormatterType {
 
 private enum DateFormat {
     case dayMonth
+    case fullWithoutYear
+    case fullWithYear
     case month
     case monthYear
 
     var translation: String {
         switch self {
         case .dayMonth: return L10n.DateFormat.dayMonth
+        case .fullWithoutYear: return L10n.DateFormat.fullWithoutYear
+        case .fullWithYear: return L10n.DateFormat.fullWithYear
         case .month: return L10n.DateFormat.month
         case .monthYear: return L10n.DateFormat.monthYear
         }

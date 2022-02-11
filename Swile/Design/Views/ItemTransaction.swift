@@ -43,21 +43,9 @@ final public class ItemTransaction: UIControl, HasData {
         }
     }
 
-    public var avatar: UIImage? {
-        didSet {
-            avatarView.image = avatar
-        }
-    }
-
-    public var icon: UIImage? {
-        didSet {
-            iconView.image = icon
-        }
-    }
-
     private let stackView = UIStackView()
     private let imageContainer = UIView()
-    private let avatarView = Avatar()
+    private let avatarView = Avatar(size: Constant.avatarSize)
     private let iconView = IconView()
     private let textContainer = UIView()
     private let textStackView = UIStackView()
@@ -74,6 +62,18 @@ final public class ItemTransaction: UIControl, HasData {
 
     public var data: Data? {
         didSet { updateData() }
+    }
+
+    public var avatar: UIImage? {
+        didSet {
+            avatarView.image = avatar
+        }
+    }
+
+    public var icon: UIImage? {
+        didSet {
+            iconView.image = icon
+        }
     }
 
     // MARK: - Initializers
