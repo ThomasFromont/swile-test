@@ -33,13 +33,22 @@ final public class ItemTransaction: UIControl, HasData {
         public let price: String
         public let priceType: PriceType
         public let tint: Tint
+        public let heroSuffix: String?
 
-        public init(title: String, subtitle: String, price: String, priceType: PriceType, tint: Tint) {
+        public init(
+            title: String,
+            subtitle: String,
+            price: String,
+            priceType: PriceType,
+            tint: Tint,
+            heroSuffix: String? = nil
+        ) {
             self.title = title
             self.subtitle = subtitle
             self.price = price
             self.priceType = priceType
             self.tint = tint
+            self.heroSuffix = heroSuffix
         }
     }
 
@@ -205,5 +214,10 @@ final public class ItemTransaction: UIControl, HasData {
         if let price = data?.price, let tint = data?.tint {
             priceTag.data = .init(text: price, tint: tint)
         }
+
+        avatarView.heroImageSuffix = data?.heroSuffix
+        avatarView.heroBackgroundSuffix = data?.heroSuffix
+        iconView.hero.id = data?.heroSuffix.map { HeroPrefix.icon + $0 }
+        iconView.hero.modifiers = [.duration(HeroDuration.medium.rawValue)]
     }
 }

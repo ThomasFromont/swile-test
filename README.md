@@ -59,10 +59,10 @@ Clean code is quite important to me, that is why the first thing I add in a proj
 - ~3h to implement to create the Transaction Design and display the list with section headers
 - ~1h to implement the testing of the `TransactionViewModel`
 - ~1h to create the second VM + VC with the detailed header
+- ~1h handle animation between the two screens using Hero
 
 ### What I would like to do next 🤔
 
 - Finish the Transaction Detail screen
-- Implement the animation between the two screen (Maybe use Hero pod considering the time available)
 - Add more testing. (`DateFormatter`, `TransactionsRepository`, ...)
 - Add SnapshotTesting for Design Components

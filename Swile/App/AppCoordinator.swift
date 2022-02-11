@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 
 final class AppCoordinator: Coordinator {
 
@@ -69,6 +70,7 @@ final class AppCoordinator: Coordinator {
         viewModel.delegate = self
         let viewController = TransactionDetailsViewController(viewModel: viewModel, styleGuide: styleGuide)
         viewController.modalPresentationStyle = .fullScreen
+        viewController.hero.isEnabled = true
         navigationController.present(viewController, animated: true, completion: nil)
     }
 }

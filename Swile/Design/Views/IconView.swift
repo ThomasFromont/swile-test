@@ -23,6 +23,13 @@ final class IconView: UIView {
         didSet { iconImageView.tintColor = tint?.darkColor }
     }
 
+    var heroSuffix: String? {
+        didSet {
+            self.hero.id = heroSuffix.map { HeroPrefix.icon + $0 }
+            self.hero.modifiers = [.duration(HeroDuration.medium.rawValue)]
+        }
+    }
+
     private let iconImageView = IconImageView()
 
     // MARK: - Initializers

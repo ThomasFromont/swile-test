@@ -13,6 +13,7 @@ target 'Swile' do
     pod 'SnapKit'
     pod 'SwiftGen'
     pod 'SwiftLint'
+    pod 'Hero'
 
     target 'SwileTests' do
         inherit! :search_paths

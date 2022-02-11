@@ -17,6 +17,7 @@ final class TransactionCellViewModel {
     let isPriceNegative: Bool
     let price: String
     let tint: Tint
+    let heroSuffix: String
 
     let rx_icon: Driver<UIImage?>
     let rx_avatar: Driver<UIImage?>
@@ -49,6 +50,8 @@ final class TransactionCellViewModel {
         self.price = price
         self.tint = transaction.smallIcon.category.tint
         self.selectObserver = selectObserver
+        self.heroSuffix = [transaction.name, String(transaction.date.timeIntervalSince1970)]
+            .joined(separator: "_")
 
         self.rx_icon = imageProvider
             .rx_image(

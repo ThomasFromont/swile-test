@@ -27,7 +27,8 @@ final class TransactionCell: UITableViewCell {
                 subtitle: viewModel.subtitle,
                 price: viewModel.price,
                 priceType: viewModel.isPriceNegative ? .text : .tag,
-                tint: viewModel.tint
+                tint: viewModel.tint,
+                heroSuffix: viewModel.heroSuffix
             )
 
             itemTransaction.rx

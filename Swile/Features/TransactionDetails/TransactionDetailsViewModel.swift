@@ -42,6 +42,7 @@ final class TransactionDetailsViewModel {
     let name: String
     let date: String
     let actions: [Action]
+    let heroSuffix: String
 
     // MARK: - Initializers
 
@@ -81,6 +82,9 @@ final class TransactionDetailsViewModel {
 
         name = transaction.name
         date = dateFormatter.formatFullRelative(date: transaction.date, relativeTo: Date())
+
+        heroSuffix = [transaction.name, String(transaction.date.timeIntervalSince1970)]
+            .joined(separator: "_")
 
         actions = []
 

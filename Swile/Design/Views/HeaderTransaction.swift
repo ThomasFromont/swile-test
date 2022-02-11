@@ -27,12 +27,14 @@ final public class HeaderTransaction: UIView, HasData {
         public let subtitle: String
         public let information: String
         public let tint: Tint
+        public let heroSuffix: String?
 
-        public init(title: String, subtitle: String, information: String, tint: Tint) {
+        public init(title: String, subtitle: String, information: String, tint: Tint, heroSuffix: String? = nil) {
             self.title = title
             self.subtitle = subtitle
             self.information = information
             self.tint = tint
+            self.heroSuffix = heroSuffix
         }
     }
 
@@ -162,5 +164,17 @@ final public class HeaderTransaction: UIView, HasData {
         avatarView.tint = data?.tint
         iconView.tint = data?.tint
         imagesContainer.backgroundColor = data?.tint.lightColor
+
+        imagesContainer.hero.id = data?.heroSuffix.map { HeroPrefix.background + $0 }
+        imagesContainer.hero.modifiers = [.duration(HeroDuration.medium.rawValue)]
+        avatarView.heroImageSuffix = data?.heroSuffix
+        iconView.heroSuffix = data?.heroSuffix
+
+        textsContainer.hero.modifiers = [
+            .whenAppearing(.delay(HeroDuration.medium.rawValue)),
+            .duration(HeroDuration.short.rawValue),
+            .translate(y: 10),
+            .fade,
+        ]
     }
 }

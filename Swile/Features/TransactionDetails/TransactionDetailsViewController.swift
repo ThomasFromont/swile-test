@@ -95,7 +95,8 @@ final class TransactionDetailsViewController: UIViewController {
             title: viewModel.price,
             subtitle: viewModel.name,
             information: viewModel.date,
-            tint: viewModel.tint
+            tint: viewModel.tint,
+            heroSuffix: viewModel.heroSuffix
         )
 
         viewModel.rx_avatar

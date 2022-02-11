@@ -42,6 +42,7 @@
 		20AFE44227B64B8400E79E1C /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44127B64B8400E79E1C /* TransactionDetailsViewController.swift */; };
 		20AFE44427B657F700E79E1C /* HeaderTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44327B657F700E79E1C /* HeaderTransaction.swift */; };
 		20AFE44627B663F800E79E1C /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44527B663F800E79E1C /* CloseButton.swift */; };
+		20AFE44927B66B2900E79E1C /* Hero+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AFE44827B66B2900E79E1C /* Hero+Helpers.swift */; };
 		20DF28BA27B503B20008FBA0 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28B927B503B20008FBA0 /* TransactionCell.swift */; };
 		20DF28BC27B503BC0008FBA0 /* TransactionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28BB27B503BC0008FBA0 /* TransactionCellViewModel.swift */; };
 		20DF28BF27B504A30008FBA0 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF28BE27B504A30008FBA0 /* DateFormatter.swift */; };
@@ -127,6 +128,7 @@
 		20AFE44127B64B8400E79E1C /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
 		20AFE44327B657F700E79E1C /* HeaderTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTransaction.swift; sourceTree = "<group>"; };
 		20AFE44527B663F800E79E1C /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		20AFE44827B66B2900E79E1C /* Hero+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hero+Helpers.swift"; sourceTree = "<group>"; };
 		20DF28B527B503190008FBA0 /* Segma-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-Bold.otf"; sourceTree = "<group>"; };
 		20DF28B627B503190008FBA0 /* Segma-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-SemiBold.otf"; sourceTree = "<group>"; };
 		20DF28B727B503190008FBA0 /* Segma-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segma-Medium.otf"; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				20DF28D227B534BD0008FBA0 /* Tint.swift */,
+				20AFE44827B66B2900E79E1C /* Hero+Helpers.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				20808E1C27B47FFC005BD5F6 /* Reusable.swift in Sources */,
 				20808E1027B47945005BD5F6 /* ColorScheme.swift in Sources */,
 				20DF28D927B553040008FBA0 /* Tag.swift in Sources */,
+				20AFE44927B66B2900E79E1C /* Hero+Helpers.swift in Sources */,
 				20808E0827B47661005BD5F6 /* HeaderCellViewModel.swift in Sources */,
 				20DF28C127B50DD10008FBA0 /* ItemTransaction.swift in Sources */,
 				20808DFF27B473EC005BD5F6 /* TransactionsViewModel.swift in Sources */,
